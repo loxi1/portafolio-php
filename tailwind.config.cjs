@@ -17,18 +17,18 @@ module.exports = {
 					DEFAULT: '#00004c'
 				},
 				'verde': {
-					100: '#c8e2cf',
-					200: '#bdddc5',
-					300: '#afd5b9',
-					400: '#a4cfaf',
-					500: '#93c7a0',
-					600: '#85bf94',
-					700: '#79b989',
-					800: '#6cb37e',
-					900: '#5eab72',
-					DEFAULT: '#52a567'
+					100: '#cbc7de',
+					200: '#c3bed8',
+					300: '#bbb5d3',
+					400: '#b0aacc',
+					500: '#a6a0c6',
+					600: '#9992bd',
+					700: '#9188b8',
+					800: '#887eb2',
+					900: '#7e73ab',
+					DEFAULT: '#796ea8'
 				},
-				'principal-dark': '#52a567',
+				'principal-dark': '#796ea8',
 				'naranja': '#F8AF3E'
 			},
 			fontSize: {
@@ -42,7 +42,16 @@ module.exports = {
 			},
 			backgroundImage: {
 				'bg-proyectos': "url(/imagenes/slider/slide-bg-02.jpg)"
-			}
+			},
+			animationDelay: {
+				275: '275ms',
+				5000: '5s',
+			},
+			animationDuration: {
+				2000: '2s',
+				'long': '10s',
+				'very-long': '20s',
+			},
 		},
 		listStyleType: {
 			none: 'none',
@@ -53,5 +62,6 @@ module.exports = {
 		}
 	},
 	plugins: [
+		require('tailwindcss-animated')
 	],
 }

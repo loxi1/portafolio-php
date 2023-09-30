@@ -45,7 +45,7 @@ Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Paquetes instalado desde el terminal
+## 👀 Paquetes instalados desde el terminal
 
 | Comandos                                 | Acciones                                         |
 | :----------------------------------------| :----------------------------------------------- |
