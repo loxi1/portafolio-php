@@ -1,0 +1,73 @@
+---
+import Container from './Container.astro';
+import SocialNetworks from './SocialNetworks.astro';
+
+interface MenuFooter {
+	title: string;
+	href?: string;
+}
+
+interface Menu_Footer extends MenuFooter {
+	menusinferiores?: Array<MenuFooter>;
+}
+
+
+export interface Props {
+	menusinferiores?: Array<Menu_Footer>;
+}
+
+const { links = [], menusinferiores = []} = Astro.props;
+
+let anio = new Date().getFullYear();
+---
+
+<footer class='page-footer text-white w-full p-12 bg-gradient-to-b from-principal-300 via-principal-700 to-principal relative overflow-hidden [&>div]:relative [&>div]:z-10'>
+	<Container>
+		<section class="flex flex-col justify-center lg:flex-row lg:justify-between gap-10 text-sm my-10">
+			<div class="flex flex-wrap gap-4 justify-center lg:justify-between lg:gap-x-14 lg:gap-y-4 w-full">
+				{
+					menusinferiores.map(({title, href}) => (
+							<a rel="prefetch-intent" href={href} class='text-center hover:underline font-semibold text-xl'>
+								{title}
+							</a>
+					))
+				}
+			</div>
+		</section>
+
+		<section
+			class='flex flex-col lg:flex-row text-center lg:text-left gap-14 lg:gap-4 text-sm text-lig my-10'
+		>
+			<nav
+				class='flex flex-col lg:flex-row gap-5 md:gap-4 justify-between w-full align-middle items-center'
+			>
+
+				<div class='flex flex-wrap gap-5 justify-center lg:justify-around text-base'>
+					Copyright © {anio} Soluciones ACME
+				</div>
+			</nav>
+		</section>
+	</Container>
+</footer>
+
+<style>
+	.page-footer::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: url('/logos/acme.svg') no-repeat;
+		background-size: 95%;
+  	background-position: center;
+  	opacity: 0.12;
+		pointer-events: none;
+	}
+
+	@media screen and (min-width: 992px) {
+		.page-footer::after {
+			background-size: 26%;
+		}
+	}
+</style>

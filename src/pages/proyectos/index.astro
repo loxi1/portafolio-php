@@ -1,0 +1,23 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Banner from "@components/principal/Banner.astro";
+import Articulo from "@components/servicios/Articulo.astro";
+import Contenedor from "@components/principal/Contenedor.astro";
+import { portafolio } from "@utils/data";
+
+---
+
+<Layout title="Proyectos" desc="Nuestro proyectos eléctricos realizados.">
+  <main>
+    <Banner title="Proyectos" paddin="32" img="banner/proyectos-de-energia.JPG" />
+  </main>
+  <Contenedor paddin="5">
+    <div class="w-full mx-auto bg-white shadow-md overflow-hidden">
+      <section>
+        <div class="grid grid-cols-1 gap-3">
+          <Articulo {...portafolio} />
+        </div>
+      </section>
+    </div>
+  </Contenedor>
+</Layout>

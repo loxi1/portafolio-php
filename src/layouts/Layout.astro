@@ -1,0 +1,121 @@
+---
+import Header from "@components/principal/Header.astro";
+import Footer from "@components/principal/Footer.astro";
+import { headerData, footerMenu } from "@utils/data";
+import Whatsaap from "@components/principal/Whatsaap.astro";
+
+import { checkImageUrl } from "@utils/all";
+import { SEO } from "astro-seo";
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const { title, desc } = Astro.props;
+
+const ogimage = "/opengraph.png"
+
+const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
+
+const makeTitle = title
+  ? "ACME" + " | " + title
+  : "ACME | Portafolio";
+
+---
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="2xl:text-[20px]">
+  <head>
+    <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+    title={makeTitle}
+    description={desc}
+    canonical={canonicalURL}
+    openGraph={{
+        basic: {
+        url: canonicalURL,
+        type: "website",
+        title: `Portafolio - Node js`,
+        image: resolvedOGImage,
+        },
+        image: {
+        alt: "Portafolio Imagen",
+        },
+    }}
+    />
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+    emailjs.init('ceDUejKXJcw-1_zk7')
+    </script>
+  </head>
+
+    <body class="antialiased text-page bg-light tracking-tight">
+        <Header {...headerData} isSticky showRssFeed showToggleTheme />
+        <slot />
+        <Footer {...footerMenu} />
+        <Whatsaap />
+        <style is:global>
+            img {
+            content-visibility: auto;
+            }
+            .dropdown:hover .dropdown-menu {
+              display: block;
+            }
+        </style>
+        <!-- The Modal -->
+        <div id="modal"
+        class="hidden fixed top-0 left-0 z-50 w-screen h-screen bg-black/70 justify-center items-center closeModal">
+
+        <!-- The close button -->
+        <a class="fixed z-90 top-6 right-8 text-white text-5xl font-bold closeModal" href="javascript:void(0)"
+            onclick="closeModal()">&times;</a>
+
+        <!-- A big image will be displayed here -->
+        <img id="modal-img" class="max-w-auto max-h-auto object-cover mx-auto" />
+        </div>
+    </body>
+</html>
+<style>
+	@font-face {
+		font-family: 'Archivo';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/noto.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Archivo Bold';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts/notob.woff2') format('woff2');
+	}
+  @font-face {
+		font-family: 'Letra';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url('/fonts/cambria.woff2') format('woff2');
+	}
+
+	@font-face {
+		font-family: 'Letra Bold';
+		font-style: normal;
+		font-weight: 700;
+		font-display: swap;
+		src: url('/fonts/cambriab.woff2') format('woff2');
+	}
+
+  html, body {
+    font-family: 'Letra';
+  }
+  h1 {
+    font-family: 'Letra bold';
+  }
+  </style>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script language="javascript" type="text/javascript" src="/js/vivus.js"></script>

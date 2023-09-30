@@ -1,0 +1,112 @@
+---
+interface Proyect {
+    title?: string;
+	description?: string;
+    dia?: string;
+    anio?: string;
+    mes?: string;
+    image?:string;
+    git?:string;
+    url?:string;
+    skills?:iconos[];
+}
+
+interface Lista_Proyectos extends Proyect {
+	proyectos?: Array<Proyect>;
+}
+
+export interface iconos {
+    name?:string;
+    imagen?:string;
+}
+
+export interface Props {
+	proyectos?: Array<Lista_Proyectos>;
+}
+
+const { proyectos = []} = Astro.props;
+
+import Imagen from "@components/servicios/Image.astro"
+let i = 0
+let orden = 1
+---
+<section class="text-principal-600 body-font">
+    <div class="flex flex-col w-full mb-10 mt-6">
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Los proyectos realizados en <b>PHP</b> estan en codeigniter, las apis estan en NODEJS y las página web estan hechas en ASTO y tailwind alojadas en CLOUDFLARE.</p>
+    </div>
+    <div class="container px-5 pb-8 mx-auto">        
+        <div class="flex flex-wrap">
+            {                
+            proyectos.map(({title, description, dia, anio, mes, image, git, skills, url, tipo}, index) => (
+                <>
+                <div class="grid-cols-3 grid gap-8 px-8 p-4 border-4 shadow-lg border-pincipal mb-4">
+                    <div class=`col-span-1 order-${((index+1)%2)+1}`>
+                        <a href="#" class="clickmodal">
+                            <img alt="gallery" class="inset-0 w-full h-full object-cover object-top aspect-[1918/944]" src=`/imagenes/portafolio/${image}`>
+                        </a>
+                    </div>
+                    <div class=`col-span-2`>
+                        <div class="relative">
+                            <h2 tipo=`${tipo}` class="tracking-widest h2 inline-flex text-sm title-font font-medium text-indigo-500 mb-1">{mes} - {anio}</h2>
+                            <span class:list={["inline-flex","right-0", "absolute", "items-center", "p-0.5", "normal-case", "text-xs", "text-white", {"bg-principal-400": tipo==="back"}, {"bg-blue-500": tipo==="front"}]}>
+                                <img class="w-5 h-5 font-black inline-block" src=`/imagenes/portafolio/${tipo}-end.svg` alt=""> &nbsp; &nbsp;{tipo}-end &nbsp; &nbsp;
+                            </span>
+                        </div>
+                        <h3 class="hfont-bold uppercase text-principal-900 text-xl mb-3">{title}</h3>
+                        
+                        <p class="leading-relaxed">{description}</p>
+                        <div class="align-text-bottom p-6">
+                            <a href=`${git}` target="_blank">
+                                <img class="w-10 inline-block" src="imagenes/portafolio/github.svg" alt="" srcset="imagenes/portafolio/github.svg">
+                            </a>
+                            {
+                
+                                skills.map(({name, imagen})=> (
+                                    <>
+                                    <span
+                                        class="whitespace-nowrap rounded-full ml-2 bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
+                                    >
+                                        <img class="inline-block w-5 text-principal" src=`/imagenes/portafolio/${imagen}.svg` alt={name}>
+                                        {name}
+                                    </span>
+                                    </>
+                                ))
+                            }
+                            
+                            {
+                                url && <Imagen img={"/imagenes/portafolio/url.svg"} nombre={url}></Imagen>
+                            }
+                        </div>
+                    </div>
+                </div>
+                </>
+            ))
+            }
+        </div>
+    </div>
+</section>
+
+<script>
+    // Get the modal by id
+    var modal = document.getElementById("modal");
+
+    // Get the modal image tag
+    var modalImg = document.getElementById("modal-img");
+
+    // Get class image
+    let clickmodal = document.querySelectorAll(".clickmodal");
+
+    //Muestra la imagen
+    clickmodal.forEach(el => el.addEventListener('click', event => {
+        console.log(event.target.getAttribute("src"));
+        modal.classList.remove('hidden');
+        modalImg.src = event.target.getAttribute("src");
+    }));
+
+    let closeModal = document.querySelectorAll(".closeModal")
+
+    //Cierra el modal
+    closeModal.forEach(el => el.addEventListener('click', event => {
+        modal.classList.add('hidden');
+    }))
+</script>

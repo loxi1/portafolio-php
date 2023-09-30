@@ -1,0 +1,42 @@
+---
+import Cuadricula5x5 from "./Cuadricula5x5.astro";
+import Contactanos from "@components/principal/Contactanos.astro";
+---
+
+<section class="pt-5 border-y-principal-500 border-4 pb-10">
+    <div class="relative">
+        <div class="container mx-auto">
+            <div class="-mx-4 flex flex-wrap">
+                <div class="w-full lg:px-4 md:px-4 px-8 lg:w-6/12">
+                    <div class="hero-content">
+                        <h1
+                            class="text-principal mb-3 txt-principal text-4xl font-bold leading-snug sm:text-[42px] lg:text-[40px] xl:text-[42px]"
+                        >
+                            TRABAJEMOS JUNTOS
+                            <br />
+                            PARA HACER CRECER<br />
+                            TUS NEGOCIO.
+                        </h1>
+                        <p
+                            class="text-principal txt-principal mb-8 max-w-full text-lg"
+                        >
+                            Si estas en busca de un <b>Programador web</b>,
+                            deseas crear una página web para tener presencia en internet, necesitas automaticas tus proceso de negocio y actividades monotas.
+                            No dudes en <b>contáctarnos</b>, espero tener <b></b>nuevos desafios</b>. y realizar cosas interesantes.
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full px-4 lg:w-6/12">
+                    <div class="lg:ml-auto lg:text-right">
+                        <div class="relative z-10 inline-block pt-11 lg:pt-0">
+                            <Contactanos />
+                            <span class="absolute -left-10 -bottom-10 z-[-1]">
+                                <Cuadricula5x5 />
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

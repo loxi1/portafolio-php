@@ -1,0 +1,157 @@
+---
+import Logo from '@components/Logo.astro';
+import MenuIcon from './icons/Menu.astro';
+import Numerocelular from './Numerocelular.astro';
+
+interface Link {
+    text?: string;
+    href?: string;
+}
+
+interface ActionLink extends Link {
+    type?: string;
+}
+
+interface MenuLink extends Link {
+    links?: Array<Link>;
+}
+
+export interface Props {
+    links?: Array<MenuLink>;
+    actions?: Array<ActionLink>;
+    isSticky?: boolean;
+    showToggleTheme?: boolean;
+    showRssFeed?: boolean;
+    position?: string;
+}
+
+const {
+    links = [],
+    actions = [],
+    isSticky = false,
+    showToggleTheme = false,
+    showRssFeed = false,
+    position = 'center',
+} = Astro.props;
+
+import Imagen from "@components/servicios/Image.astro"
+---
+
+<header
+  class="sticky top-0 z-40 flex-none mx-auto w-full transition-all ease-in duration-100 bg-white border-2 border-b-principal"
+  id="header"
+>
+    <div class="py-3 px-3 md:py-3.5 md:px-4 mx-auto w-full md:flex md:justify-between max-w-7xl">
+        <div class:list={[{"mr-auto": position === "right"}, "flex justify-between"]}>
+            <a class="flex items-center" href={'/'}>
+                <Logo />
+            </a>
+            <div class="flex items-center md:hidden">
+                <input type="checkbox" id="menu" hidden class="peer" />
+                <label
+                    for="menu"
+                    class="relative z-50 md:hidden peer-checked:[&>.first]:hidden peer-checked:[&>.last]:block cursor-pointer transition hover:scale-110 peer-checked:rotate-90 rotate-0"
+                >
+                    <MenuIcon />
+                </label>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <Numerocelular />
+        </div>
+        <nav
+        id="navbar"
+        class="items-center w-full md:w-auto hidden md:flex text-slate-200 h-[calc(100vh-72px)] md:h-auto overflow-y-auto md:overflow-visible md:mx-5"
+        aria-label="Main navigation"
+        >
+            
+            <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center w-full md:w-auto text-xl md:text-base">
+                {
+                links.map(({ text, href, links }) => (
+                    <li class={links?.length ? 'dropdown' : ''}>
+                    {links?.length ? (
+                        <>
+                        <button class="font-medium hover:text-principal-900 px-4 text-principal py-3 flex items-center transition duration-150 ease-in-out">
+                            {text} <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 ml-0.5 hidden md:inline" astro-icon="tabler:chevron-down"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <ul class="dropdown-menu md:backdrop-blur-md md:bg-white rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white/90 md:min-w-[200px] drop-shadow-xl">
+                            {links.map(({ text: text2, href: href2 }) => (
+                            <li>
+                                <a rel="prefetch-intent"
+                                class="first:rounded-t last:rounded-b md:hover:bg-white text-principal hover:bg-white-100 py-2 px-5 block whitespace-no-wrap"
+                                href={href2}
+                                >
+                                {text2}
+                                </a>
+                            </li>
+                            ))}                            
+                        </ul>
+                        </>
+                    ) : (
+                        <a
+                        class="font-medium hover:text-principal-900 text-principal px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                        href={href}
+                        >
+                        {text}
+                        </a>
+                    )}
+                    </li>
+                ))
+                }
+                <li>
+                    <a rel="prefetch-intent" target="_blank"
+                    class="first:rounded-t hidden lg:block md:block last:rounded-b md:hover:bg-white text-principal hover:bg-white-100 py-2 px-5 whitespace-no-wrap"
+                    href="https://github.com/loxi1"
+                    >
+                    <img class="w-7 hover:scale-125 hover:rotate-45 inline-block" src="/imagenes/portafolio/github.svg" alt="" /> Github
+                    </a>
+                </li>
+                <li>
+                    <a rel="prefetch-intent" target="_blank"
+                    class="first:rounded-t hidden lg:block md:block last:rounded-b md:hover:bg-white text-principal hover:bg-white-100 py-2 px-5 whitespace-no-wrap"
+                    href="https://drive.google.com/drive/folders/1MfFvkmzLE27XJzRY_LXlyzdSDihHbL_t?usp=sharing"
+                    >
+                    <img class="w-8 hover:scale-125 hover:rotate-45 inline-block" src="/imagenes/portafolio/pdf.svg" alt="" /> CV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<script type="module">
+    const menuCheckbox = document.getElementById("menu");
+    const mediaQuery = window.matchMedia("(min-width: 640px)"); // Breakpoint sm
+    const $navbar = document.querySelector("#navbar");
+  
+    $navbar.querySelectorAll("a").forEach((anchor) => {
+      anchor.addEventListener("click", (_event) => {
+        if (document.body.style.overflowY === "hidden") {
+          hideOverFlow(false);
+        }
+      });
+    });
+  
+    /** @param {boolean} value */
+    function hideOverFlow(value) {
+      if (value) {
+        window.scrollTo(0, 0);
+        document.body.style.overflowY = "hidden";
+        $navbar.classList.remove("hidden");
+      } else {
+        document.body.style.overflowY = "auto";
+        $navbar.classList.add("hidden");
+      }
+    }
+  
+    menuCheckbox.addEventListener("change", (e) =>
+      e.target.checked ? hideOverFlow(true) : hideOverFlow(false)
+    );
+  
+    mediaQuery.addEventListener("change", (e) => {
+      if (e.matches) {
+        hideOverFlow(false);
+        menuCheckbox.checked = false;
+      }
+    });
+  </script>

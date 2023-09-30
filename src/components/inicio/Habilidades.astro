@@ -1,0 +1,15 @@
+---
+export interface Props {
+	habilidades?: Array<string>;
+}
+const { habilidades = []} = Astro.props;
+---
+{
+    habilidades.map((image) => (
+        <>
+        <div class="p-1 border-2 border-principal rounded-lg">
+            <img title=`${image}` alt=`${image}` class="inset-0 w-full h-full object-cover object-top hover:scale-125" src=`/imagenes/portafolio/${image}.svg`>                                                                                    
+        </div>
+        </>
+    ))
+}
