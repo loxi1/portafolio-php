@@ -107,7 +107,7 @@ export const portafolio = {
             url: '' 
         },{ 
             title: 'Prácticas prefesionales', 
-            description: 'Gestionar Prácticas prefesionales consiste en ralizar un seguimiento y evlaución de parte del profesor al alumno.', 
+            description: 'Gestionar Prácticas prefesionales consiste en ralizar el seguimiento por parte del TUTOR GUIA y evlaución de parte del DOCENTE de la IE que realiza las prácticas ALUMNO.', 
             dia: '',
             anio: '2023',
             mes: 'Febrero',
