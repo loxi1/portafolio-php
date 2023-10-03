@@ -76,7 +76,7 @@ export const portafolio = {
             mes: 'Abril',
             git: 'https://github.com/loxi1/sistema-buenos-amigos-fc',
             tipo: "back",
-            image: 'gios-restaurante.png', 
+            image: 'sistema-buenos-amigos-fc.png', 
             "skills": [
                 {
                     "name": "PHP",
@@ -113,7 +113,7 @@ export const portafolio = {
             mes: 'Febrero',
             git: 'https://github.com/loxi1/sist-practicas-prof',
             tipo: "back",
-            image: 'gios-restaurante.png', 
+            image: 'sist-practicas-prof.png', 
             "skills": [
                 {
                     "name": "PHP",
