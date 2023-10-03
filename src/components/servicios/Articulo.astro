@@ -47,14 +47,14 @@ let orden = 1
                     </div>
                     <div class=`col-span-2`>
                         <div class="relative">
-                            <span class:list={["inline-flex","right-0", "absolute", "items-center", "p-0.5", "normal-case", "text-xs", "text-white", {"bg-principal-400": tipo==="back"}, {"bg-blue-500": tipo==="front"}]}>
+                            <span class:list={["inline-flex", "absolute", "items-center", "p-0.5", "normal-case", "text-xs", "text-white", {"left-0": ((index+1)%2)==1},{"right-0": ((index+1)%2)==0}, {"bg-principal-400": tipo==="back"}, {"bg-blue-500": tipo==="front"}]}>
                                 <img class="w-5 h-5 font-black inline-block" src=`/imagenes/portafolio/${tipo}-end.svg` alt=""> &nbsp; &nbsp;{tipo}-end &nbsp; &nbsp;
                             </span>
                         </div>
-                        <h3 class="hfont-bold uppercase text-principal-900 text-xl mb-3">{title}</h3>
+                        <h3 class:list={["hfont-bold","mb-3","text-xl","text-principal-900","uppercase",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>{title}</h3>
                         
-                        <p class="leading-relaxed">{description}</p>
-                        <div class="align-text-bottom p-6">
+                        <p class:list={["leading-relaxed",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>{description}</p>
+                        <div class:list={["align-text-bottom p-6",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>
                             <a href=`${git}` target="_blank">
                                 <img class="w-10 inline-block" src="imagenes/portafolio/github.svg" alt="" srcset="imagenes/portafolio/github.svg">
                             </a>
