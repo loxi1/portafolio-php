@@ -315,3 +315,174 @@ export const skills = {
         "php", "codeigniter", "nodejs","prisma", "fastify", "express", "mysql", "postgresql"
     ]
 }
+
+export const work = {
+    experiencia: [
+        {
+            periodo: "2024 Agosto - Actualidad",
+            empresa: "COFACO Industries S. A. C.",
+            puesto: "ANALISTA PROGRAMADOR DE SISTEMAS WEB",
+            descripcion: "TAI LOY S.A., es la primera cadena de Stationery en el Perú. Somos los especialistas y líderes del sector de útiles escolares y de oficina a nivel nacional.",
+            funciones: [
+                {
+                    detalle: "Crear App android para el control despacho, lectura chip RFID.",
+                },
+                {
+                    detalle: "Crear Aplicacion escritorio en C# para el control despacho, lectura chip RFID.",
+                },
+                {
+                    detalle: "Crear Aplicacion escritorio en .Net para el control despacho, lectura chip RFID.",
+                },
+                {
+                    detalle: "Desplegar aplicaciones en servidores locales usando ubuntu, nginx y apache.",
+                }
+            ],
+            habilidades: "PHP, .Net, Csharp, Android, Mysql, SyBase, NGINX, Apache, Github, Docker y Linux"
+        },
+        {
+            periodo: "2023 Diciembre - 2024 Julio",
+            empresa: "TAI LOY S.A.",
+            puesto: "ANALISTA DE SISTEMAS WEB",
+            descripcion: "TAI LOY S.A., es la primera cadena de Stationery en el Perú. Somos los especialistas y líderes del sector de útiles escolares y de oficina a nivel nacional.",
+            funciones: [
+                {
+                    detalle: "Encargado de dar soporte al sistema comercial suplacorp.",
+                },
+                {
+                    detalle: "Encargado de dar soporte al sistema coorporativo tailoy.",
+                },
+                {
+                    detalle: "Dar soporte y mantenimiento al aplicativo Android de inventario, apis REST creadas en PHP.",
+                },
+                {
+                    detalle: "Desarrollo de aplicación de agendamiento de flotas, apis REST para ser consumidas por SAP y PHP",
+                }
+            ],
+            habilidades: "PHP, Python(Django), .Net, Csharp, Android, SQLServer, Mysql, postgreSQL NGINX, Apache, GitLab y Linux"
+        },
+        {
+            periodo: "2023 Agosto - Setiembre",
+            empresa: "Gio’s Restaurante",
+            puesto: "PROGRAMADOR WEB",
+            descripcion: "Gio's Restaurante, empresa dedicada al rubro de gastronomía, cuenta con un ERP hecho con Codeigniter, este sistema administa dos sedes: el almacen y el restaurante.",
+            funciones: [
+                {
+                    detalle: "Creación de reportes para el área de Producción.",
+                },
+                {
+                    detalle: "Refactorización de código.",
+                },
+                {
+                    detalle: "Encargado de gestionar la Base de datos MariaDB  en AWS.",
+                },
+                {
+                    detalle: "Mantenimiento a los reportes y mejorar los tiempo de respuesta de las consultas usando store   procedure  y   triggers.",
+                }
+            ],
+            habilidades: "PHP, Codeigniter, Bootstrap, MySQL y AWS"
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ],
+            habilidades: "Node.JS, prima, Docker, Fastify, PostgreSQL, GIT, LINUX, JSON Web Tokens, CloudServer"
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ],
+            habilidades: "Node.JS, prima, Docker, Fastify, PostgreSQL, GIT, LINUX, JSON Web Tokens"
+        },
+        {
+            periodo: "2023 - Abril - Mayo",
+            empresa: "Try Catch.tv (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "Este proyecto me permitió ampliar mis conocimientos como Desarrollador Front con tecnologías como Next.JS, Tailwind, GIT con consumo de api.",
+                }
+            ],
+            habilidades: "NextJS, Tailwind, GIT"
+        },
+        {
+            periodo: "2023 - Enero - Marzo",
+            empresa: "Freelance",
+            puesto: "PROGRAMADOR WEB",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "Creación de páginas web estáticas para JLC Electricistas y Confecciones Adler.",
+                }
+            ],
+            habilidades: "Javascript, TypeScript, HTML, CSS, Tailwind, Astro.build, CloudFlare, Figma, GIT"
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ]
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ]
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ]
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ]
+        },
+        {
+            periodo: "2023 - Mayo - Junio",
+            empresa: "Devathon (Concurso de programación)",
+            puesto: "PROGRAMADOR",
+            descripcion: "",
+            funciones: [
+                {
+                    detalle: "El proyecto es una plataforma web de accesibilidad, tiene por finalidad permitir a las personas con habilidades reducidas obtener información sobre la accesibilidad de los espacios públicos y privados con respecto a su ubicación actual. Se usó API de terceros para recopilar datos de geolocalización con la finalidad, de obtener el detalle accesibilidad de diferentes lugares. Mi aporte fue realizar EndPoind.",
+                }
+            ]
+        }
+    ]
+}
