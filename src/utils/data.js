@@ -74,7 +74,7 @@ export const portafolio = {
             dia: '',
             anio: '2024',
             mes: 'Enero',
-            git: '',
+            git: 'https://github.com/loxi1/cs-RFID',
             tipo: "back",
             image: 'control-despacho.png',
             "skills": [
@@ -83,12 +83,12 @@ export const portafolio = {
                     "imagen": "csharp"
                 },
                 {
-                    "name": ".Net",
-                    "imagen": ".net"
-                },
-                {
                     "name": "Mysql",
                     "imagen": "mysql"
+                },
+                {
+                    "name": "Sybase",
+                    "imagen": "sybase"
                 }
             ],
             url: ''
@@ -119,26 +119,18 @@ export const portafolio = {
             url: ''
         },
         {
-            title: 'Control de despacho',
-            description: 'Aplicación de control de despacho, lectura chip RFID.',
+            title: 'Control de prendas',
+            description: 'Aplicación de control de prendas cuando llegas de los talleres externos.',
             dia: '',
             anio: '2024',
             mes: 'Enero',
-            git: 'https://github.com/loxi1/cs-RFID',
+            git: 'https://github.com/loxi1/APP_pruebas',
             tipo: "back",
             image: 'control-despacho.png',
             "skills": [
                 {
-                    "name": "C#",
-                    "imagen": "csharp"
-                },
-                {
-                    "name": "Mysql",
-                    "imagen": "mysql"
-                },
-                {
-                    "name": "Sybase",
-                    "imagen": "sybase"
+                    "name": "Android",
+                    "imagen": "android"
                 }
             ],
             url: ''
