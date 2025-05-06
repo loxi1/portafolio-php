@@ -33,7 +33,7 @@ export const portafolio = {
     proyectos: [
         {
             title: 'GoTeacherperu',
-            description: 'Cases en la modalidad virtural o presencial para escolares y universitrios.',
+            description: 'Clases en la modalidad virtural o presencial para escolares y universitrios.',
             dia: '',
             anio: '2025',
             mes: 'Marzo',
@@ -70,7 +70,7 @@ export const portafolio = {
         },
         {
             title: 'Control de despacho',
-            description: 'Aplicación de control de despacho, lectura chip RFID.',
+            description: 'Aplicación de control de despacho, mediante un GABINETE RFID se pueden controlar la cantidad y tipo de prendas.',
             dia: '',
             anio: '2024',
             mes: 'Enero',
