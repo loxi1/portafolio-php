@@ -31,6 +31,118 @@ export const footerMenu = {
 
 export const portafolio = {
     proyectos: [
+        {
+            title: 'GoTeacherperu',
+            description: 'Cases en la modalidad virtural o presencial para escolares y universitrios.',
+            dia: '',
+            anio: '2025',
+            mes: 'Marzo',
+            git: 'https://github.com/loxi1/astro-goteacher',
+            tipo: "front",
+            image: 'go-teacher-peru.png',
+            "skills": [
+                {
+                    "name": "Astro",
+                    "imagen": "astro"
+                },
+                {
+                    "name": "Ghithub",
+                    "imagen": "github"
+                },
+                {
+                    "name": "Tailwind",
+                    "imagen": "tailwind"
+                },
+                {
+                    "name": "Javascript",
+                    "imagen": "javascript"
+                },
+                {
+                    "name": "Typescript",
+                    "imagen": "ts"
+                },
+                {
+                    "name": "Cloudflare",
+                    "imagen": "cloudflare"
+                }
+            ],
+            url: 'https://www.goteacherperu.com/'
+        },
+        {
+            title: 'Control de despacho',
+            description: 'Aplicación de control de despacho, lectura chip RFID.',
+            dia: '',
+            anio: '2024',
+            mes: 'Enero',
+            git: '',
+            tipo: "back",
+            image: 'control-despacho.png',
+            "skills": [
+                {
+                    "name": "C#",
+                    "imagen": "csharp"
+                },
+                {
+                    "name": ".Net",
+                    "imagen": ".net"
+                },
+                {
+                    "name": "Mysql",
+                    "imagen": "mysql"
+                }
+            ],
+            url: ''
+        },
+        {
+            title: 'Vinculador de prendas',
+            description: 'Aplicación para vincular los chip RFID con el codigo de barras.',
+            dia: '',
+            anio: '2025',
+            mes: 'Enero',
+            git: 'https://github.com/loxi1/Lector_mesa',
+            tipo: "back",
+            image: 'vincular-prenda.png',
+            "skills": [
+                {
+                    "name": ".Net Fremework",
+                    "imagen": "net"
+                },
+                {
+                    "name": "Mysql",
+                    "imagen": "mysql"
+                },
+                {
+                    "name": "Sybase",
+                    "imagen": "sybase"
+                }
+            ],
+            url: ''
+        },
+        {
+            title: 'Control de despacho',
+            description: 'Aplicación de control de despacho, lectura chip RFID.',
+            dia: '',
+            anio: '2024',
+            mes: 'Enero',
+            git: 'https://github.com/loxi1/cs-RFID',
+            tipo: "back",
+            image: 'control-despacho.png',
+            "skills": [
+                {
+                    "name": "C#",
+                    "imagen": "csharp"
+                },
+                {
+                    "name": "Mysql",
+                    "imagen": "mysql"
+                },
+                {
+                    "name": "Sybase",
+                    "imagen": "sybase"
+                }
+            ],
+            url: ''
+        },
         { 
             title: 'GOerp', 
             description: 'ERP para gestionar los procesos de Gios restaurante.', 
@@ -280,7 +392,7 @@ export const portafolio = {
                     "imagen": "tailwind"
                 },
             ],
-            url: 'https://www.jlcelectricistas.com/'
+            url: 'https://jlc-consultora-proyectos.pages.dev/'
         },
         { 
             title: 'Confecciones adler', 
