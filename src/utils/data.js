@@ -101,7 +101,7 @@ export const portafolio = {
             mes: 'Enero',
             git: 'https://github.com/loxi1/Lector_mesa',
             tipo: "back",
-            image: 'vincular-prenda.png',
+            image: 'vincular-prenda.PNG',
             "skills": [
                 {
                     "name": ".Net Fremework",
