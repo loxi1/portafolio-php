@@ -80,7 +80,7 @@ export const portafolio = {
             "skills": [
                 {
                     "name": "C#",
-                    "imagen": "csharp"
+                    "imagen": "csharp-1"
                 },
                 {
                     "name": "Mysql",
