@@ -76,7 +76,7 @@ export const portafolio = {
             mes: 'Enero',
             git: 'https://github.com/loxi1/cs-RFID',
             tipo: "back",
-            image: 'control-despacho.png',
+            image: 'validar_salida_ok.PNG',
             "skills": [
                 {
                     "name": "C#",
