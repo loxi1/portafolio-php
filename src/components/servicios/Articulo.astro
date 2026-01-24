@@ -1,111 +1,229 @@
 ---
+interface Icono {
+  name?: string;
+  imagen?: string;
+}
+
 interface Proyect {
-    title?: string;
-	description?: string;
-    dia?: string;
-    anio?: string;
-    mes?: string;
-    image?:string;
-    git?:string;
-    url?:string;
-    skills?:iconos[];
-}
-
-interface Lista_Proyectos extends Proyect {
-	proyectos?: Array<Proyect>;
-}
-
-export interface iconos {
-    name?:string;
-    imagen?:string;
+  title?: string;
+  description?: string;
+  dia?: string;
+  anio?: string;
+  mes?: string;
+  image?: string;
+  git?: string;
+  url?: string;
+  skills?: Icono[];
+  tipo?: string; // "back" | "front" | "fullstack"
+  orientation?: string; // "portrait" | "landscape"
 }
 
 export interface Props {
-	proyectos?: Array<Lista_Proyectos>;
+  proyectos?: Array<Proyect>;
 }
 
-const { proyectos = []} = Astro.props;
+const { proyectos = [] } = Astro.props;
 
-import Imagen from "@components/servicios/Image.astro"
-let i = 0
-let orden = 1
+const tipoLabel = (tipo?: string) => {
+  if (tipo === "front") return "front-end";
+  if (tipo === "back") return "back-end";
+  if (tipo === "fullstack") return "full-stack";
+  return "proyecto";
+};
+
+const tipoColor = (tipo?: string) => {
+  if (tipo === "front") return "bg-blue-500";
+  if (tipo === "back") return "bg-principal-400";
+  if (tipo === "fullstack") return "bg-emerald-600";
+  return "bg-principal-400";
+};
 ---
+
 <section class="text-principal-600 body-font">
-    <div class="flex flex-col w-full mb-10 mt-6">
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Los proyectos realizados en <b>PHP</b> estan en codeigniter y laravel, las apis estan en NODEJS y las página web estan hechas en ASTO y tailwind alojadas en CLOUDFLARE.</p>
+  <div class="container mx-auto px-6 pt-6 pb-8">
+    <div class="mb-8">
+      <p class="mx-auto max-w-4xl leading-relaxed text-base text-principal-700">
+        Proyectos desarrollados en <b>PHP (CodeIgniter/Laravel)</b> y <b>APIs en Node.js</b>, con front-end en
+        <b>Astro + Tailwind</b>. Experiencia en <b>optimización SQL</b>, <b>consolidación de datos</b> y
+        <b>tiempo real con Redis + WebSockets</b>, desplegando en <b>Linux (Nginx/Apache) y Docker</b>.
+      </p>
     </div>
-    <div class="container px-5 pb-8 mx-auto">        
-        <div class="flex flex-wrap">
-            {                
-            proyectos.map(({title, description, dia, anio, mes, image, git, skills, url, tipo}, index) => (
-                <>
-                <div class="grid-cols-3 grid gap-8 px-8 p-4 border-4 shadow-lg border-pincipal mb-4">
-                    <div class=`col-span-1 order-${((index+1)%2)+1}`>
-                        <a href="#" class="clickmodal">
-                            <img alt="gallery" class="inset-0 w-full h-full object-cover object-top aspect-[1918/944]" src=`/imagenes/portafolio/${image}`>
-                        </a>
-                    </div>
-                    <div class=`col-span-2`>
-                        <div class="relative">
-                            <span class:list={["inline-flex", "absolute", "items-center", "p-0.5", "normal-case", "text-xs", "text-white", {"left-0": ((index+1)%2)==1},{"right-0": ((index+1)%2)==0}, {"bg-principal-400": tipo==="back"}, {"bg-blue-500": tipo==="front"}]}>
-                                <img class="w-5 h-5 font-black inline-block" src=`/imagenes/portafolio/${tipo}-end.svg` alt=""> &nbsp; &nbsp;{tipo}-end &nbsp; &nbsp;
-                            </span>
-                        </div>
-                        <h3 class:list={["hfont-bold","mb-3","text-xl","text-principal-900","uppercase",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>{title}</h3>
-                        
-                        <p class:list={["leading-relaxed",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>{description}</p>
-                        <div class:list={["align-text-bottom p-6",{"text-right": ((index+1)%2)==1},{"text-left": ((index+1)%2)==0}]}>
-                            <a href=`${git}` target="_blank">
-                                <img class="w-10 inline-block" src="/imagenes/portafolio/github.svg" alt="" srcset="/imagenes/portafolio/github.svg">
-                            </a>
-                            {
-                
-                                skills.map(({name, imagen})=> (
-                                    <>
-                                    <span
-                                        class="whitespace-nowrap rounded-full ml-2 bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600"
-                                    >
-                                        <img class="inline-block w-5 text-principal" src=`/imagenes/portafolio/${imagen}.svg` alt={name}>
-                                        {name}
-                                    </span>
-                                    </>
-                                ))
-                            }
-                            
-                            {
-                                url && <Imagen img={"/imagenes/portafolio/url.svg"} nombre={url}></Imagen>
-                            }
-                        </div>
-                    </div>
+
+    <div class="flex flex-col gap-6">
+      {
+        proyectos.map((p, index) => {
+          const isOdd = (index + 1) % 2 === 1;
+          const orientation = p.orientation ?? "landscape";
+
+          return (
+            <article class="border-2 border-principal-200 bg-white shadow-sm rounded-xl overflow-hidden hover:shadow-lg transition">
+              <div class="grid grid-cols-1 lg:grid-cols-3 gap-0">
+                {/* Imagen */}
+                <button
+                  type="button"
+                  class={`relative group lg:col-span-1 w-full text-left ${
+                    isOdd ? "lg:order-1" : "lg:order-3"
+                  }`}
+                  data-modal-src={`/imagenes/portafolio/${p.image ?? ""}`}
+                  data-orientation={orientation}
+                >
+                  {/* Badge tipo */}
+                  <span
+                    class={`absolute top-3 left-3 z-10 inline-flex items-center gap-2 rounded-md px-2 py-1 text-xs font-semibold text-white ${tipoColor(p.tipo)}`}
+                  >
+                    <img class="w-4 h-4" src={`/imagenes/portafolio/${p.tipo ?? "back"}-end.svg`} alt="" />
+                    {tipoLabel(p.tipo)}
+                  </span>
+
+                  <div
+                    class={`w-full bg-principal-50 overflow-hidden flex items-center justify-center ${
+                      orientation === "portrait" ? "h-[380px]" : "h-[260px] lg:min-h-[240px]"
+                    }`}
+                  >
+                    <img
+                      src={`/imagenes/portafolio/${p.image ?? ""}`}
+                      alt={p.title ?? "Proyecto"}
+                      class={`w-full h-full transition ${
+                        orientation === "portrait"
+                          ? "object-contain"
+                          : "object-cover object-top"
+                      }`}
+                      loading="lazy"
+                    />
+                  </div>
+                </button>
+
+                {/* Contenido */}
+                <div class={`lg:col-span-2 p-6 ${isOdd ? "lg:order-2" : "lg:order-2"}`}>
+                  <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                    <h3 class="text-lg md:text-xl font-bold text-principal-900 uppercase">
+                      {p.title}
+                    </h3>
+
+                    {(p.mes || p.anio) && (
+                      <span class="text-sm text-principal-500">
+                        {p.mes ? `${p.mes} ` : ""}{p.anio ?? ""}
+                      </span>
+                    )}
+                  </div>
+
+                  {p.description && (
+                    <p class="mt-3 text-principal-700 leading-relaxed">
+                      {p.description}
+                    </p>
+                  )}
+
+                  {/* Skills */}
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    {(p.skills ?? []).map((s) => (
+                      <span class="inline-flex items-center gap-2 rounded-full bg-purple-50 px-3 py-1 text-xs text-purple-700 border border-purple-100">
+                        <img
+                          class="w-4 h-4"
+                          src={`/imagenes/portafolio/${s.imagen}.svg`}
+                          alt={s.name ?? "skill"}
+                          loading="lazy"
+                          onerror="this.style.display='none'"
+                        />
+                        <span class="font-medium">{s.name}</span>
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div class="mt-5 flex flex-wrap items-center gap-3">
+                    {p.git && (
+                      <a
+                        href={p.git}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 rounded-lg border border-principal-200 px-3 py-2 text-sm text-principal-800 hover:bg-principal-50 transition"
+                        aria-label="Abrir repositorio GitHub"
+                      >
+                        <img class="w-5 h-5" src="/imagenes/portafolio/github.svg" alt="GitHub" />
+                        GitHub
+                      </a>
+                    )}
+
+                    {p.url && (
+                      <a
+                        href={p.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 rounded-lg border border-principal-200 px-3 py-2 text-sm text-principal-800 hover:bg-principal-50 transition"
+                        aria-label="Abrir demo / URL"
+                      >
+                        <img class="w-5 h-5" src="/imagenes/portafolio/url.svg" alt="URL" />
+                        Ver demo
+                      </a>
+                    )}
+                  </div>
                 </div>
-                </>
-            ))
-            }
-        </div>
+              </div>
+            </article>
+          );
+        })
+      }
     </div>
+  </div>
+
+  {/* Modal FULL SCREEN */}
+  <div id="modal" class="fixed inset-0 hidden z-[999] bg-black">
+    <button
+      class="absolute top-4 right-4 z-10 text-white text-3xl closeModal"
+      aria-label="Cerrar"
+      type="button"
+    >
+      ✕
+    </button>
+
+    <div class="w-screen h-screen flex items-center justify-center">
+      <img
+        id="modal-img"
+        src=""
+        alt="Preview"
+        class="max-w-screen max-h-screen object-contain"
+      />
+    </div>
+  </div>
 </section>
 
 <script>
-    // Get the modal by id
-    var modal = document.getElementById("modal");
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
 
-    // Get the modal image tag
-    var modalImg = document.getElementById("modal-img");
+  // abrir modal
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-modal-src]");
+    if (!btn) return;
 
-    // Get class image
-    let clickmodal = document.querySelectorAll(".clickmodal");
+    const src = btn.getAttribute("data-modal-src");
+    if (!src) return;
 
-    //Muestra la imagen
-    clickmodal.forEach(el => el.addEventListener('click', event => {
-        console.log(event.target.getAttribute("src"));
-        modal.classList.remove('hidden');
-        modalImg.src = event.target.getAttribute("src");
-    }));
+    modalImg.src = src;
+    modal.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
 
-    let closeModal = document.querySelectorAll(".closeModal")
+  // cerrar modal
+  const closeModal = () => {
+    modal.classList.add("hidden");
+    modalImg.src = "";
+    document.body.style.overflow = "";
+  };
 
-    //Cierra el modal
-    closeModal.forEach(el => el.addEventListener('click', event => {
-        modal.classList.add('hidden');
-    }))
+  document.querySelectorAll(".closeModal").forEach((el) =>
+    el.addEventListener("click", closeModal)
+  );
+
+  // cerrar tocando fondo negro
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  // cerrar con ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+      closeModal();
+    }
+  });
 </script>

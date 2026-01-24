@@ -32,6 +32,32 @@ export const footerMenu = {
 export const portafolio = {
     proyectos: [
         {
+          title: 'Control de Piso (Confecciones)',
+          description:
+            'Sistema web para control de producción en planta: registro de operaciones, permisos/pausas, fallas de máquina, eficiencia por colaborador y reportes por línea. Optimización de consultas y consolidación diaria para tablas con +3M registros. Alertas en tiempo real con Redis + WebSockets.',
+          dia: '',
+          anio: '2025',
+          mes: 'Julio',
+          git: 'https://github.com/loxi1/api-control-piso', // si aún no es público, déjalo vacío
+          tipo: 'back',
+          image: 'control-piso.png', // coloca aquí tu screenshot principal (ej. el de la tablet)
+          orientation: 'portrait',
+          skills: [
+            { name: 'PHP', imagen: 'php' },
+            { name: 'MySQL', imagen: 'mysql' },
+            { name: 'Sybase', imagen: 'sybase' },
+            { name: 'JavaScript', imagen: 'javascript' },
+            { name: 'Tailwind', imagen: 'tailwind' },
+            { name: 'Bootstrap', imagen: 'boostrap' },
+            { name: 'Node.js', imagen: 'nodejs' },
+            { name: 'Redis', imagen: 'redis' },
+            { name: 'WebSocket', imagen: 'websocket' },
+            { name: 'Docker', imagen: 'docker' },
+            { name: 'Linux', imagen: 'linux' }
+          ],
+          url: 'https://github.com/loxi1/api-control-piso' // si no es público, déjalo vacío
+        },
+        {
             title: 'GoTeacherperu',
             description: 'Clases en la modalidad virtural o presencial para escolares y universitrios.',
             dia: '',
@@ -127,6 +153,7 @@ export const portafolio = {
             git: 'https://github.com/loxi1/APP_pruebas',
             tipo: "back",
             image: 'control-despacho.png',
+            orientation: 'portrait',
             "skills": [
                 {
                     "name": "Android",
@@ -135,15 +162,15 @@ export const portafolio = {
             ],
             url: ''
         },
-        { 
-            title: 'GOerp', 
-            description: 'ERP para gestionar los procesos de Gios restaurante.', 
+        {
+            title: 'GOerp',
+            description: 'ERP para gestionar los procesos de Gios restaurante.',
             dia: '',
             anio: '2023',
             mes: 'Enero',
             git: 'https://github.com/mesquen/GOerp',
             tipo: "back",
-            image: 'gios-restaurante.png', 
+            image: 'gios-restaurante.png',
             "skills": [
                 {
                     "name": "PHP",
@@ -171,16 +198,16 @@ export const portafolio = {
                     "imagen": "boostrap"
                 }
             ],
-            url: 'https://goerp.pe/web' 
-        },{ 
-            title: 'Buenos amigos FC', 
-            description: 'Sistema para gestionar las pichangas deportivas de barrio.', 
+            url: 'https://goerp.pe/web'
+        },{
+            title: 'Buenos amigos FC',
+            description: 'Sistema para gestionar las pichangas deportivas de barrio.',
             dia: '',
             anio: '2022',
             mes: 'Abril',
             git: 'https://github.com/loxi1/sistema-buenos-amigos-fc',
             tipo: "back",
-            image: 'sistema-buenos-amigos-fc.png', 
+            image: 'sistema-buenos-amigos-fc.png',
             "skills": [
                 {
                     "name": "PHP",
@@ -208,16 +235,16 @@ export const portafolio = {
                     "imagen": "boostrap"
                 }
             ],
-            url: '' 
-        },{ 
-            title: 'Prácticas prefesionales', 
-            description: 'Gestionar Prácticas prefesionales consiste en ralizar el seguimiento por parte del TUTOR GUIA y evlaución de parte del DOCENTE de la IE que realiza las prácticas ALUMNO.', 
+            url: ''
+        },{
+            title: 'Prácticas prefesionales',
+            description: 'Gestionar Prácticas prefesionales consiste en ralizar el seguimiento por parte del TUTOR GUIA y evlaución de parte del DOCENTE de la IE que realiza las prácticas ALUMNO.',
             dia: '',
             anio: '2023',
             mes: 'Febrero',
             git: 'https://github.com/loxi1/sist-practicas-prof',
             tipo: "back",
-            image: 'sist-practicas-prof.png', 
+            image: 'sist-practicas-prof.png',
             "skills": [
                 {
                     "name": "PHP",
@@ -245,16 +272,16 @@ export const portafolio = {
                     "imagen": "boostrap"
                 }
             ],
-            url: '' 
-        },{ 
-            title: 'Accesibilidad de establecimiento', 
-            description: 'Averiguar si un lugar es ascequible para discapacitados, se hace consultas al api de google y se registra valoración y comentario en caso este logueado el usuario.', 
+            url: ''
+        },{
+            title: 'Accesibilidad de establecimiento',
+            description: 'Averiguar si un lugar es ascequible para discapacitados, se hace consultas al api de google y se registra valoración y comentario en caso este logueado el usuario.',
             dia: '',
             anio: '2023',
             mes: 'Julio',
             git: 'https://github.com/lemcok/equipo4-ed4-backend',
             tipo: "back",
-            image: 'accesibilidad-de-lugar.png', 
+            image: 'accesibilidad-de-lugar.png',
             "skills": [
                 {
                     "name": "Node",
@@ -286,7 +313,7 @@ export const portafolio = {
                     "imagen": "docker"
                 }
             ],
-            url: '' 
+            url: ''
         },
         {
             title: 'Practica Node (Biblioteca)',
@@ -297,6 +324,7 @@ export const portafolio = {
             git: 'https://github.com/loxi1/node-prisma',
             image: 'prueba-express.png',
             tipo: "back",
+            orientation: 'portrait',
             "skills" : [
                 {
                     "name": "Node",
@@ -335,6 +363,7 @@ export const portafolio = {
             git: 'https://github.com/loxi1/jlc-inventario',
             image: 'jlc-inventario.png',
             tipo: "back",
+            orientation: 'portrait',
             "skills" : [
                 {
                     "name": "Node",
@@ -361,15 +390,16 @@ export const portafolio = {
                 }
             ]
         },
-        { 
-            title: 'jlcelectricistas', 
-            description: 'Grupo de ingenieros electricos que brindan servicios de: diseño de proyectos eléctricos en media y baja tensión, ingeniería de detalles, Memorias Descriptivas, Memorias de Cálculos, Especificaciones Técnicas y planos eléctricos en general', dia: '', anio: '2023', mes: 'Marzo', 
-            dia: '', 
-            anio: '2023', 
-            mes: 'Mayo', 
-            git: 'https://github.com/loxi1/jlc-consultora-proyectos', 
-            image: 'jlc-electricistas.png', 
+        {
+            title: 'jlcelectricistas',
+            description: 'Grupo de ingenieros electricos que brindan servicios de: diseño de proyectos eléctricos en media y baja tensión, ingeniería de detalles, Memorias Descriptivas, Memorias de Cálculos, Especificaciones Técnicas y planos eléctricos en general', dia: '', anio: '2023', mes: 'Marzo',
+            dia: '',
+            anio: '2023',
+            mes: 'Mayo',
+            git: 'https://github.com/loxi1/jlc-consultora-proyectos',
+            image: 'jlc-electricistas.png',
             tipo: "front",
+            orientation: 'portrait',
             "skills": [
                 {
                     "name": "Astro",
@@ -386,13 +416,13 @@ export const portafolio = {
             ],
             url: 'https://jlc-consultora-proyectos.pages.dev/'
         },
-        { 
-            title: 'Confecciones adler', 
-            description: 'Emprendimiento del rubro textil dedicada al corte, confección y bordados.', 
-            dia: '', 
-            anio: '2023', 
-            mes: 'Febreo', 
-            git: 'https://github.com/loxi1/Adler', 
+        {
+            title: 'Confecciones adler',
+            description: 'Emprendimiento del rubro textil dedicada al corte, confección y bordados.',
+            dia: '',
+            anio: '2023',
+            mes: 'Febreo',
+            git: 'https://github.com/loxi1/Adler',
             image: 'confeciones-adler.png',
             tipo: "front",
             "skills": [
@@ -410,7 +440,7 @@ export const portafolio = {
                 },
             ],
             url: 'https://confeccionesadler.com/'
-        }        
+        }
     ]
 }
 

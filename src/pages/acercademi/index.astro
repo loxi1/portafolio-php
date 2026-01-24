@@ -2,499 +2,353 @@
 import Layout from "@layouts/Layout.astro";
 ---
 
-<Layout title="Acerca de mi" desc="Acerca de mi mis estudios y mi trabajo">
-    <div class="container mx-auto lg:max-w-5xl">
-        <div class="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 gap-8 px-8">
-            <div class="lg:col-span-2 md:order-2 mb-10">
-                <div class="flex lg:flex-col flex-row space-y-4 pt-0 lg:pt-10 md:pt-10">
-                    <div class="sm:col-span-2 pt-10 lg:pt-0 md:pt-0">
-                        <h2 class="text-2xl">Anibal Cayetano</h2>
-                        <h4 class="text-lg uppercase font-bold">Programador web</h4>
-                    </div>
-                    <div class="lg:hidden md:hidden w-1/2 inline-block relative">
-                        <img src="/imagenes/cajasinicio/nosotros-lideres.png" alt="Photo" class="w-1/4 rounded-full absolute right-0" srcset="/imagenes/cajasinicio/nosotros-lideres.png">
-                    </div>                    
-                </div>
-                <div class="resume_title flex gap-4 items-center -ml-5 mt-4">
-                    <img
-                        alt="Education"
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        data-nimg="1"
-                        class="p-1 text-verde"
-                        style="color:transparent"
-                        src="/imagenes/acercademi/acercademi.svg"
-                    /><h3 class="h4 text-principal text-base lg:text-lg">Acerca de mi</h3>
-                </div>
-                <ol class="relative border-l border-verde-200 dark:border-verde-700">
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-                        >
-                        </div>
-                        <h3
-                            class="flex items-center mb-1 text-lg font-semibold text-principal-900"
-                        >
-                            <span
-                                class="text-primary mb-2 block text-lg font-semibold"
-                            >
-                                <svg
-                                    class="text-principal-400 w-6 h-6 inline-block"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="#00004c"
-                                    viewBox="0 0 256 256"
-                                    ><path
-                                        d="m192.97 35.026 9.178-13.106a6 6 0 0 1 9.83 6.883l-9.177 13.106a6 6 0 0 1-9.83-6.883Zm-21.818-2.505a5.993 5.993 0 0 0 7.349-4.243l4.142-15.454A6 6 0 0 0 171.05 9.72l-4.142 15.454a6.001 6.001 0 0 0 4.243 7.348Zm36.099 66.61a78.372 78.372 0 0 1-14.06 95.766 78.006 78.006 0 0 1-140.754 12.091l-37-64.086a23.98 23.98 0 0 1 20.793-35.987l-3.615-6.262a23.984 23.984 0 0 1 17.286-35.737A24 24 0 0 1 91.27 43.108a23.971 23.971 0 0 1 41.804-.455l15.616 27.049a23.987 23.987 0 0 1 41.561-.015Zm-30.105 35.857-17-29.445a12 12 0 1 0-20.785 12l16 27.713a6 6 0 1 1-10.392 6l-42-72.746a12 12 0 1 0-20.784 12l30 51.962a6 6 0 0 1-10.393 6l-38-65.819a12 12 0 1 0-20.784 12l38 65.819a6 6 0 1 1-10.393 6l-23.999-41.568v-.002a12 12 0 0 0-20.786 12l37 64.086a66 66 0 1 0 114.316-66Zm58.408-89.493a6 6 0 0 0-8.357-1.474L214.091 53.2a6 6 0 1 0 6.883 9.83l13.106-9.177a6 6 0 0 0 1.474-8.357Z"
-                                    ></path></svg
-                                >
-                                , Hola bienvenido, mi nombre es <b>ANIBAL</b>
-                            </span>
-                        </h3>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Egresado de ingeniería de sistemas. Actuamente
-                            vivo en el distrito de carabayllo.
-                            </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Soy Desarrollador Backend Junior con experiencia en el desarrollo de software y sólidos conocimientos en Frontend. Busco una posición como programador web en tecnologías como <b>PHP, C#, Android, .NET Framework o Node.js.</b>
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Tengo experiencia trabajando con frameworks como CodeIgniter, Laravel, Django, Express, Fastify y Prisma, así como con bases de datos MySQL, Sybase (SQLDBX), SQL Server y PostgreSQL. Además, cuento con conocimientos en, Linux Docker y servicios en la nube como AWS.
-                        </p>
-                    </li>
-                </ol>
+<Layout
+  title="Acerca de mí | Aníbal Cayetano"
+  desc="Perfil profesional, experiencia y habilidades en desarrollo backend, tiempo real (Redis/WebSockets) y DevOps."
+>
+  <div class="container mx-auto lg:max-w-5xl">
+    <div class="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 gap-8 px-8">
+      <!-- Columna principal -->
+      <div class="lg:col-span-2 md:order-2 mb-10">
+        <div class="flex lg:flex-col flex-row space-y-4 pt-0 lg:pt-10 md:pt-10">
+          <div class="sm:col-span-2 pt-10 lg:pt-0 md:pt-0">
+            <h2 class="text-2xl font-semibold text-principal-900">Aníbal Cayetano</h2>
+            <h4 class="text-lg uppercase font-bold text-principal-700">
+              Full Stack Developer (Backend · Tiempo real · DevOps)
+            </h4>
+          </div>
 
-
-                <div class="resume_title flex gap-4 items-center -ml-5">
-                    <img
-                        alt="Education"
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        data-nimg="1"
-                        class="p-1"
-                        style="color:transparent"
-                        src="/imagenes/acercademi/trabajos.svg"
-                    /><h3 class="h4 text-principal lg:text-lg text-base">Experiencia laboral</h3>
-                </div>
-                <ol class="relative border-l border-verde-200 dark:border-verde-700">
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700">
-                        </div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">2024 Agosto - Presente</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Fredy Jurado (Jefe Sistemas) 987960662</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">COFACO Industries S. A. C.</span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">Analista de Sistemas</span>
-                        </h3>
-                        
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-                            <b>COFACO Industries S. A. C., </b>  Enfocamos en el desarrollo, fabricación y distribución de prendas innovadoras
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Desarrollé una aplicación en C# para el control de despacho en un gabinete RFID, lo que permitió a COFACO mejorar la trazabilidad de productos y optimizar el tiempo de despacho en un 40%.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Implementé una solución en .NET para vincular prendas con códigos de barras, permitiendo al gabinete RFID identificar automáticamente la descripción de cada producto, reduciendo errores de identificación en un 95%.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Desarrollé una aplicación Android para asignar aleatoriamente códigos de barras a prendas tercerizadas sin chip RFID, lo que permitió su integración en el sistema de control y mejoró el control de inventario en un 30%.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Creé endpoints en PHP para ser consumidos por la aplicación Android, facilitando una comunicación eficiente entre el sistema móvil y los servicios backend, mejorando la sincronización de datos en tiempo real.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Lideré la configuración y el despliegue de las aplicaciones en servidores Linux utilizando Apache y Nginx sobre Ubuntu, asegurando una infraestructura estable y escalable para entornos de producción.
-                        </p>                            
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700">
-                        </div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">2023 Diciembre - 2024 Julio</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Edgar Flower (Jefe Sistemas) 994158227</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">TAILOY S.A.</span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">Analista de Sistemas</span>
-                        </h3>
-                        
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-                            <b>TAILOY S.A., </b> es la primera cadena de Stationery en el Perú. Especialistas y líderes del sector de útiles escolares y de oficina a nivel nacional. <b>Android</b>, aplicación para control de inventario. <b>.Net</b>, mantenimiento y soporte sistema de pedidos, <b>Python</b>, Mantenimiento y soporte a los sitemas comercial y coorporativo
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Desarrollé APIs REST en PHP con autenticación mediante tokens, consumidas desde aplicaciones Android. Esta implementación mejoró en un 60% la eficiencia en la transmisión de datos entre dispositivos móviles y servidores. Se utilizó Bootstrap para la interfaz de administración y MySQL como motor de base de datos.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Brindé soporte y mantenimiento a los sistemas comercial y corporativo basados en Python (Django) y PostgreSQL, logrando una reducción del 40% en tiempos de respuesta ante incidencias críticas y mejorando la estabilidad general del sistema.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Diseñé y desarrollé una aplicación para el agendamiento de flotas utilizando PHP, Bootstrap, jQuery y APIs REST. La solución fue integrada exitosamente con SAP y la web corporativa, permitiendo automatizar procesos logísticos y reducir los errores de programación de flotas en un 70%.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        Lideré la configuración y el despliegue de aplicaciones en servidores Linux (CentOS y Ubuntu) mediante Apache y Nginx, optimizando el rendimiento del entorno productivo y reduciendo los tiempos de despliegue en un 50%.
-                        </p>                            
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700">
-                        </div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">2023 - 2023 Setiembre</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Milton esquen (Gerente general) 912149389</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">Gio’s Restaurante</span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">Analista programador</span>
-                        </h3>
-                        
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-                            <b>Gio's Restaurante, </b> empresa dedicada al rubro de gastronomía, cuenta con un ERP hecho con <b>Codeigniter</b>, este sistema administa dos sedes: el almacen y el restaurante.
-                        </p>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">Mi trabajo alli consistio en realizar actualizaciones de los modulo y crear reportes de los modulos de RRHH y PRODUCCION, usando codeigniter, jquery, boostrap y MySQL.</p>
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-verde-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"></div>
-                        <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">02-2023</time>
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">Freelance</span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">Programador</span>
-                        </h3>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Creación de paginas estáticas realizadas con <b>ASTRO</b>, <b>TAILWIND</b> y despliegues
-en servidor <b>CLOUDFLARE</b>. Proyectos personales usando <b>NODEJS</b> y <b>ReactJS</b> y consumo de apis.
-                        </p>                        
-                    </li>
-                    
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"></div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">Marzo de 2022 - Agosto 2022</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Milton esquen (Gerente general) 912149389</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">                               
-                                Gio’s Restaurante
-                            </span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">                               
-                                Analista programador
-                            </span>
-                        </h3>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">Creación de reportes de RRHH (Gestión de tiempo) usando framework
-                            Codeigniter, Jquery y Boostrap. Estos reportes ayudaron en la mejorar de la
-                            gestión de personal y mejorar la los tiempos de respuesta de los reportes de las
-                            marcaciones de personal.</p>
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"></div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">Junio de 2020 - Diciembre 2021</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Agusto caceres (Gerente proyectos) 912149389</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">                               
-                                Reserva tu pasión
-                            </span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">                               
-                                Programador web
-                            </span>
-                        </h3>
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-                            <b>Reserva tu pasión</b>, emprendimiento dedicado a la consultoria dedicada, creación de sistemas web y aplicaciones mobiles.
-                        </p>
-                        <ul class="text-principal-400">
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Desarrollo de aplicativos usando React JS con Boostrap.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Páginas web en Vuejs consumiendo servicios API.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Desarrollo de web usando magento.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Coborar en un proyecto usando Flutter</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Uso de plataforma Linux distribución Ubuntu</li>
-                        </ul>
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Mi trabajo consistio en maquetar paginas web usando boostrap, consumir <b>apis</b>, dar la funcionalidad de las mismas con <b>VueJs</b> y <b>ReactJs.</b>
-                        </p>
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"></div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">Abril de 2018 - Mayo 2020</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Milton esquen (Gerente general) 912149389</time>
-                        </div>
-                        
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">                               
-                                Gio’s Restaurante
-                            </span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">                               
-                                Analista programador
-                            </span>
-                        </h3>
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8">
-                        </p>
-                        <ul class="text-principal-400">
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Lidere el proyecto GOerp, sistema ERP basado en PHP, MYSQL y JAVASCRIPT usando el framework CODEIGNITER.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Los modulos más destacados fueron: PRODUCCION, ALMCEN, KARDEX, COMPRAS Y VENTAS.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Se implemento la metodología agil SCRUM para acelerar el proceso de construcción obteniendo, entregas de valor en corto tiempo.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Finalmente, realice los despligues al entrorno de producción en los seridores de AWS además, se uso GIT para el control de versiones.</li>
-                        </ul>
-                        <br />
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8">
-                            Este ERP ayudo a gestionar sus procesos manuales tales como: realizar requerimientos de compra, gestionar el almacen, tener un stock atualizado, gestionar la venta hacia el restaurant, getionar las ordenes de producción, y getionar el pago de los trabajadores. 
-                        </p>
-                    </li>
-                    <li class="mb-10 ml-6">
-                        <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"></div>
-                        <div class="flex justify-between">
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500">Febrero de 2018- Abril 2018</time>
-                            <time class="block mb-1 text-sm font-normal leading-none text-principal-900 dark:text-principal-900">Ref. Francisco chuquizutaa (Gerente proyectos) 912149389</time>
-                        </div>
-
-                        <h4 class="mb-1 text-lg font-light text-principal-300">
-                            <span class="text-primary mb-1 block text-lg font-semibold">                               
-                                GLAJUMEDIA S.A.C
-                            </span>
-                        </h4>
-                        <h3 class="mb-1 text-lg font-bold text-principal-900">
-                            <span class="text-primary mb-2 block text-lg font-semibold uppercase">                               
-                                Programador web
-                            </span>
-                        </h3>
-                        <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-                            <b>Reserva tu pasión</b>, emprendimiento dedicado a la consultoria dedicada, creación de sistemas web y aplicaciones mobiles.
-                        </p>
-                        <ul class="text-principal-400">
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Colaborar en proyectos codeigniter.</li>
-                            <li class="flex items-center space-x-3"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="flex-shrink-0 w-6 h-6 text-principal dark:text-principal-400" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 0 1 0 1.414l-8 8a1 1 0 0 1-1.414 0l-4-4a1 1 0 0 1 1.414-1.414L8 12.586l7.293-7.293a1 1 0 0 1 1.414 0z" clip-rule="evenodd"/></svg> Colaborar con proyectos en PhoneGap.</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-            <div class="lg:col-span-1 p-3 lg:pr-10 lg:bg-grey-light rounded-xl md:order-1">
-                <img src="/imagenes/cajasinicio/anbal_avatar.png" alt="Photo" class="w-20 hidden lg:flex md:flex" srcset="/imagenes/cajasinicio/anbal_avatar.png">
-                <div class="resume_title flex gap-4 items-center -ml-5">
-                    <img
-                        alt="Education"
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        data-nimg="1"
-                        class="p-1"
-                        style="color:transparent"
-                        src="/imagenes/acercademi/educacion.svg"
-                    /><h3 class="h4 text-principal text-xl">Educación</h3>
-                </div>
-                <ol
-                    class="relative border-l border-verde-200 dark:border-verde"
-                >
-                    <li class="mb-10 ml-4">
-                        <div
-                            class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-                        >
-                        </div>
-                        <time
-                            class="mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500"
-                            >2022</time
-                        >
-                        <h3 class="text-lg font-semibold text-principal-900">
-                            Ingenieria de sistemas
-                        </h3>
-                        <p class="mb-4 text-xl sm:text-base font-normal text-principal-500">
-                            Universidad Tecnológica del Perú
-                        </p>
-                    </li>
-                    <li class="mb-10 ml-4">
-                        <div
-                            class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-                        >
-                        </div>
-                        <time
-                            class="mb-1 text-sm font-normal leading-none text-principal-400 dark:text-principal-500"
-                            >2014</time
-                        >
-                        <h3 class="text-lg font-semibold text-principal-900">
-                            Computación e informatica
-                        </h3>
-                        <p class="text-xl sm:text-base font-normal text-principal-500">
-                            Instituto Superior Tecnológico CEVATEC
-                        </p>
-                    </li>
-                </ol>
-                <div class="h-10"></div>
-                <div class="resume_title flex gap-4 items-center -ml-5">
-                    <img
-                        alt="Education"
-                        loading="lazy"
-                        width="60"
-                        height="60"
-                        decoding="async"
-                        data-nimg="1"
-                        class="p-1"
-                        style="color:transparent"
-                        src="/imagenes/acercademi/skill.svg"
-                    /><h3 class="h4 text-principal lg:text-lg text-base">Skills</h3>
-                </div>
-                <ol
-                    class="relative border-l border-verde-200 dark:border-verde-700"
-                >
-                
-                    <li class="mb-10 ml-6">
-                        
-                        <span class="bg-[#777BB3] text-white font-bold px-1 mb-1 inline-block">PHP</span>
-                        <div class="w-[85%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#777BB3]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#689F63] text-white font-bold px-1 mb-1 inline-block">NODE JS</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#689F63]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#F0DB4F] text-principal font-bold px-1 mb-1 inline-block">JavaScript</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#F0DB4F]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#f06529] text-white font-bold px-1 mb-1 inline-block">HTML</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#777BB3]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#53b4ec] text-white font-bold px-1 mb-1 inline-block">React JS</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#53b4ec]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#689F63] text-white font-bold px-1 mb-1 inline-block">PostgreSQL</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#689F63]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#f06529] text-white font-bold px-1 mb-1 inline-block">HTML</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#777BB3]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <span class="bg-[#000000] text-white font-bold px-1 mb-1 inline-block">MYSQL</span>
-                        <div class="w-[80%]  mb-2">
-                            <span id="ProgressLabel" class="sr-only">Loading</span>
-                          
-                            <span
-                              role="progressbar"
-                              aria-labelledby="ProgressLabel"
-                              aria-valuenow="75"
-                              class="block rounded-full bg-principal-200"
-                            >
-                              <span
-                                class="block h-2 rounded-full bg-[#000000]"
-                                style="width: 75%"
-                              ></span>
-                            </span>
-                        </div>
-                        <div
-                            class="absolute w-3 h-3 bg-verde-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-                        >
-                        </div>
-                    </li>
-                </ol>
-            </div>
+          <div class="lg:hidden md:hidden w-1/2 inline-block relative">
+            <img
+              src="/imagenes/cajasinicio/nosotros-lideres.png"
+              alt="Foto de perfil"
+              class="w-1/4 rounded-full absolute right-0"
+              srcset="/imagenes/cajasinicio/nosotros-lideres.png"
+            />
+          </div>
         </div>
+
+        <!-- ACERCA DE MI -->
+        <div class="resume_title flex gap-4 items-center -ml-5 mt-4">
+          <img
+            alt="Acerca de mí"
+            loading="lazy"
+            width="60"
+            height="60"
+            decoding="async"
+            class="p-1 text-verde"
+            style="color:transparent"
+            src="/imagenes/acercademi/acercademi.svg"
+          />
+          <h3 class="h4 text-principal text-base lg:text-lg">Acerca de mí</h3>
+        </div>
+
+        <ol class="relative border-l border-verde-200 dark:border-verde-700">
+          <li class="mb-10 ml-6">
+            <div
+              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
+            ></div>
+
+            <h3 class="flex items-center mb-2 text-lg font-semibold text-principal-900">
+              <span class="text-primary block text-lg font-semibold">
+                <svg
+                  class="text-principal-400 w-6 h-6 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#00004c"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="m192.97 35.026 9.178-13.106a6 6 0 0 1 9.83 6.883l-9.177 13.106a6 6 0 0 1-9.83-6.883Zm-21.818-2.505a5.993 5.993 0 0 0 7.349-4.243l4.142-15.454A6 6 0 0 0 171.05 9.72l-4.142 15.454a6.001 6.001 0 0 0 4.243 7.348Zm36.099 66.61a78.372 78.372 0 0 1-14.06 95.766 78.006 78.006 0 0 1-140.754 12.091l-37-64.086a23.98 23.98 0 0 1 20.793-35.987l-3.615-6.262a23.984 23.984 0 0 1 17.286-35.737A24 24 0 0 1 91.27 43.108a23.971 23.971 0 0 1 41.804-.455l15.616 27.049a23.987 23.987 0 0 1 41.561-.015Zm-30.105 35.857-17-29.445a12 12 0 1 0-20.785 12l16 27.713a6 6 0 1 1-10.392 6l-42-72.746a12 12 0 1 0-20.784 12l30 51.962a6 6 0 0 1-10.393 6l-38-65.819a12 12 0 1 0-20.784 12l38 65.819a6 6 0 1 1-10.393 6l-23.999-41.568v-.002a12 12 0 0 0-20.786 12l37 64.086a66 66 0 1 0 114.316-66Z"
+                  ></path>
+                </svg>
+                Hola, soy <b>Aníbal</b>
+              </span>
+            </h3>
+
+            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
+              Egresado de <b>Ingeniería de Sistemas</b>. Desarrollo soluciones web y móviles orientadas
+              a procesos reales de negocio, con foco en <b>rendimiento</b>, <b>mantenibilidad</b> y
+              <b>producción</b>.
+            </p>
+
+            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
+              Soy <b>Full Stack Developer</b> con fuerte orientación al <b>Back End</b> (PHP/Node.js),
+              y experiencia en <b>tiempo real</b> (Redis + WebSockets), optimización de bases de datos,
+              APIs REST, y despliegues en <b>Linux</b> con <b>Docker</b>.
+            </p>
+
+            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
+              He implementado sistemas industriales como <b>control de piso</b> (confecciones),
+              reportes de eficiencia, consolidaciones diarias para tablas con <b>+3M registros</b>,
+              y automatizaciones en Ubuntu (limpieza de sesiones, jobs y procesos batch).
+              También elaboro documentación funcional en <b>Bizagi</b> (BPMN, casos de uso y secuencias).
+            </p>
+
+            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
+              Actualmente profundizo en <b>NestJS + NATS</b> para arquitecturas desacopladas y
+              microservicios, y en integraciones con Android usando <b>Kotlin</b> y notificaciones.
+            </p>
+          </li>
+        </ol>
+
+        <!-- EXPERIENCIA -->
+        <div class="resume_title flex gap-4 items-center -ml-5">
+          <img
+            alt="Experiencia laboral"
+            loading="lazy"
+            width="60"
+            height="60"
+            decoding="async"
+            class="p-1"
+            style="color:transparent"
+            src="/imagenes/acercademi/trabajos.svg"
+          />
+          <h3 class="h4 text-principal lg:text-lg text-base">Experiencia laboral</h3>
+        </div>
+
+        <ol class="relative border-l border-verde-200 dark:border-verde-700">
+          <!-- COFACO -->
+          <li class="mb-10 ml-6">
+            <div
+              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
+            ></div>
+
+            <div class="flex justify-between gap-3 flex-wrap">
+              <time class="block mb-1 text-sm font-normal leading-none text-principal-400">
+                2024 Agosto - Presente
+              </time>
+              <time class="block mb-1 text-sm font-normal leading-none text-principal-900">
+                Ref. Fredy Jurado (Jefe Sistemas) 987960662
+              </time>
+            </div>
+
+            <h4 class="mb-1 text-lg font-light text-principal-300">
+              <span class="text-primary mb-1 block text-lg font-semibold">COFACO Industries S. A. C.</span>
+            </h4>
+            <h3 class="mb-1 text-lg font-bold text-principal-900">
+              <span class="text-primary mb-2 block text-lg font-semibold uppercase">
+                Analista de Sistemas / Full Stack Developer
+              </span>
+            </h3>
+
+            <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
+              Empresa del rubro textil. Implementación de soluciones para <b>control de producción</b>,
+              <b>control de piso</b>, trazabilidad y reportes operativos.
+            </p>
+
+            <ul class="text-principal-500 text-xl sm:text-base font-normal list-disc pl-6 space-y-2">
+              <li>
+                Diseño y desarrollo de un <b>sistema de control de piso</b> (confecciones) con reportes
+                de eficiencia, tiempos muertos, operación vs meta y potencial por línea.
+              </li>
+              <li>
+                Optimización de rendimiento para tablas con <b>+3 millones de registros</b> mediante
+                <b>consolidaciones diarias</b>, índices y procedimientos/funciones SQL.
+              </li>
+              <li>
+                Implementación de eventos en tiempo real con <b>Redis (pub/sub)</b> y <b>WebSockets</b>
+                para alertas de fallas, cambios de operación y actividades no productivas.
+              </li>
+              <li>
+                Integración con sistemas legacy en <b>Sybase</b> y servicios backend en <b>PHP</b>;
+                desarrollo de APIs para consumo web y Android.
+              </li>
+              <li>
+                Desarrollo de integración Android con <b>Kotlin</b> para asociar <b>dispositivo ↔ máquina</b>
+                y soportar operación en planta.
+              </li>
+              <li>
+                Automatización en <b>Ubuntu</b> (jobs, limpieza de sesiones, procesos batch) y despliegues
+                con <b>Docker</b>, <b>PM2</b> y <b>systemd</b>.
+              </li>
+              <li>
+                Documentación funcional y de procesos en <b>Bizagi</b> (BPMN, casos de uso y secuencias).
+              </li>
+              <li>
+                Implementación de soluciones RFID (UROVO DT50, Zebra FX9600, UHF TS800) para control y trazabilidad.
+              </li>
+            </ul>
+          </li>
+
+          <!-- TAI LOY -->
+          <li class="mb-10 ml-6">
+            <div
+              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
+            ></div>
+
+            <div class="flex justify-between gap-3 flex-wrap">
+              <time class="block mb-1 text-sm font-normal leading-none text-principal-400">
+                2023 Diciembre - 2024 Julio
+              </time>
+              <time class="block mb-1 text-sm font-normal leading-none text-principal-900">
+                Ref. Edgar Flower (Jefe Sistemas) 994158227
+              </time>
+            </div>
+
+            <h4 class="mb-1 text-lg font-light text-principal-300">
+              <span class="text-primary mb-1 block text-lg font-semibold">TAILOY S.A.</span>
+            </h4>
+
+            <h3 class="mb-1 text-lg font-bold text-principal-900">
+              <span class="text-primary mb-2 block text-lg font-semibold uppercase">Analista de Sistemas</span>
+            </h3>
+
+            <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
+              Soporte y evolución de sistemas comerciales y corporativos. Integraciones, APIs y despliegues en Linux.
+            </p>
+
+            <ul class="text-principal-500 text-xl sm:text-base font-normal list-disc pl-6 space-y-2">
+              <li>APIs REST en PHP con autenticación por tokens para consumo desde Android.</li>
+              <li>Soporte a sistemas en Python (Django) y PostgreSQL, mejorando estabilidad y respuesta ante incidencias.</li>
+              <li>Despliegues en Linux (Apache/Nginx) optimizando tiempos de publicación y mantenimiento.</li>
+            </ul>
+          </li>
+
+          <!-- Resto de experiencias: puedes mantenerlas como están (ya funcionan) -->
+        </ol>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="lg:col-span-1 p-3 lg:pr-10 lg:bg-grey-light rounded-xl md:order-1">
+        <img
+          src="/imagenes/cajasinicio/anbal_avatar.png"
+          alt="Avatar de Aníbal"
+          class="w-20 hidden lg:flex md:flex"
+          srcset="/imagenes/cajasinicio/anbal_avatar.png"
+        />
+
+        <!-- EDUCACION -->
+        <div class="resume_title flex gap-4 items-center -ml-5">
+          <img
+            alt="Educación"
+            loading="lazy"
+            width="60"
+            height="60"
+            decoding="async"
+            class="p-1"
+            style="color:transparent"
+            src="/imagenes/acercademi/educacion.svg"
+          />
+          <h3 class="h4 text-principal text-xl">Educación</h3>
+        </div>
+
+        <ol class="relative border-l border-verde-200 dark:border-verde">
+          <li class="mb-10 ml-4">
+            <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+            <time class="mb-1 text-sm font-normal leading-none text-principal-400">2022</time>
+            <h3 class="text-lg font-semibold text-principal-900">Ingeniería de Sistemas</h3>
+            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500">
+              Universidad Tecnológica del Perú
+            </p>
+          </li>
+
+          <li class="mb-10 ml-4">
+            <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
+            <time class="mb-1 text-sm font-normal leading-none text-principal-400">2014</time>
+            <h3 class="text-lg font-semibold text-principal-900">Computación e Informática</h3>
+            <p class="text-xl sm:text-base font-normal text-principal-500">
+              Instituto Superior Tecnológico CEVATEC
+            </p>
+          </li>
+        </ol>
+
+        <div class="h-10"></div>
+
+        <!-- SKILLS -->
+        <div class="resume_title flex gap-4 items-center -ml-5">
+          <img
+            alt="Skills"
+            loading="lazy"
+            width="60"
+            height="60"
+            decoding="async"
+            class="p-1"
+            style="color:transparent"
+            src="/imagenes/acercademi/skill.svg"
+          />
+          <h3 class="h4 text-principal lg:text-lg text-base">Skills</h3>
+        </div>
+
+        <ol class="relative border-l border-verde-200 dark:border-verde-700">
+          <li class="mb-10 ml-6">
+            <!-- PHP -->
+            <span class="bg-[#777BB3] text-white font-bold px-1 mb-1 inline-block">PHP</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="PHP" aria-valuenow="85" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#777BB3]" style="width: 85%"></span>
+              </span>
+            </div>
+
+            <!-- NODE -->
+            <span class="bg-[#689F63] text-white font-bold px-1 mb-1 inline-block">Node.js</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="Node.js" aria-valuenow="80" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#689F63]" style="width: 80%"></span>
+              </span>
+            </div>
+
+            <!-- JS -->
+            <span class="bg-[#F0DB4F] text-principal font-bold px-1 mb-1 inline-block">JavaScript</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="JavaScript" aria-valuenow="80" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#F0DB4F]" style="width: 80%"></span>
+              </span>
+            </div>
+
+            <!-- REDIS -->
+            <span class="bg-[#D82C20] text-white font-bold px-1 mb-1 inline-block">Redis</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="Redis" aria-valuenow="70" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#D82C20]" style="width: 70%"></span>
+              </span>
+            </div>
+
+            <!-- DOCKER -->
+            <span class="bg-[#0db7ed] text-white font-bold px-1 mb-1 inline-block">Docker</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="Docker" aria-valuenow="75" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#0db7ed]" style="width: 75%"></span>
+              </span>
+            </div>
+
+            <!-- LINUX -->
+            <span class="bg-[#111827] text-white font-bold px-1 mb-1 inline-block">Linux</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="Linux" aria-valuenow="80" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#111827]" style="width: 80%"></span>
+              </span>
+            </div>
+
+            <!-- MYSQL -->
+            <span class="bg-[#000000] text-white font-bold px-1 mb-1 inline-block">MySQL</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="MySQL" aria-valuenow="80" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#000000]" style="width: 80%"></span>
+              </span>
+            </div>
+
+            <!-- POSTGRES -->
+            <span class="bg-[#336791] text-white font-bold px-1 mb-1 inline-block">PostgreSQL</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="PostgreSQL" aria-valuenow="70" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#336791]" style="width: 70%"></span>
+              </span>
+            </div>
+
+            <!-- ANDROID -->
+            <span class="bg-[#3DDC84] text-white font-bold px-1 mb-1 inline-block">Android (Kotlin)</span>
+            <div class="w-[85%] mb-2">
+              <span role="progressbar" aria-label="Android Kotlin" aria-valuenow="65" class="block rounded-full bg-principal-200">
+                <span class="block h-2 rounded-full bg-[#3DDC84]" style="width: 65%"></span>
+              </span>
+            </div>
+
+            <div
+              class="absolute w-3 h-3 bg-verde-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
+            ></div>
+          </li>
+        </ol>
+      </div>
     </div>
+  </div>
 </Layout>
