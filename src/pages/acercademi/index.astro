@@ -4,351 +4,306 @@ import Layout from "@layouts/Layout.astro";
 
 <Layout
   title="Acerca de mí | Aníbal Cayetano"
-  desc="Perfil profesional, experiencia y habilidades en desarrollo backend, tiempo real (Redis/WebSockets) y DevOps."
+  desc="Backend Engineer orientado a sistemas en tiempo real, integración industrial, bases de datos y despliegue en Linux."
 >
-  <div class="container mx-auto lg:max-w-5xl">
-    <div class="lg:grid lg:grid-cols-3 md:grid md:grid-cols-3 gap-8 px-8">
-      <!-- Columna principal -->
-      <div class="lg:col-span-2 md:order-2 mb-10">
-        <div class="flex lg:flex-col flex-row space-y-4 pt-0 lg:pt-10 md:pt-10">
-          <div class="sm:col-span-2 pt-10 lg:pt-0 md:pt-0">
-            <h2 class="text-2xl font-semibold text-principal-900">Aníbal Cayetano</h2>
-            <h4 class="text-lg uppercase font-bold text-principal-700">
-              Full Stack Developer (Backend · Tiempo real · DevOps)
-            </h4>
+  <div class="container mx-auto lg:max-w-6xl px-5 lg:px-8 py-10">
+    <!-- HERO -->
+    <section class="rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div class="grid lg:grid-cols-[1.4fr_.9fr] gap-0">
+        <div class="p-8 lg:p-10">
+          <p class="text-sm uppercase tracking-[0.2em] text-principal-500 font-semibold">
+            Backend Engineer · Real-Time Systems · Industrial Integration
+          </p>
+
+          <h1 class="mt-3 text-3xl lg:text-5xl font-bold text-principal-900 leading-tight">
+            Aníbal Cayetano
+          </h1>
+
+          <p class="mt-4 text-base lg:text-lg text-principal-600 leading-8 max-w-3xl">
+            Desarrollador con experiencia construyendo soluciones backend para entornos reales de negocio:
+            sistemas de producción, APIs, tiempo real con Redis/WebSockets, optimización SQL e integración
+            con dispositivos industriales como RFID, lectores Zebra y Android.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-3 text-sm">
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">PHP</span>
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">Node.js</span>
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">MySQL / Sybase</span>
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">Redis + WebSockets</span>
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">Docker + Linux</span>
+            <span class="px-3 py-2 rounded-full bg-principal-100 text-principal-800 font-medium">RFID / Zebra</span>
           </div>
 
-          <div class="lg:hidden md:hidden w-1/2 inline-block relative">
+          <div class="mt-8 grid sm:grid-cols-3 gap-4">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-2xl font-bold text-principal-900">+8 años</p>
+              <p class="text-sm text-principal-600 mt-1">Experiencia en desarrollo y mantenimiento de sistemas</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-2xl font-bold text-principal-900">+3M</p>
+              <p class="text-sm text-principal-600 mt-1">Registros trabajados en optimización y consolidación SQL</p>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+              <p class="text-2xl font-bold text-principal-900">Tiempo real</p>
+              <p class="text-sm text-principal-600 mt-1">Alertas, colas, eventos operativos y monitoreo productivo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-principal-900 to-principal-700 text-white p-8 lg:p-10 flex flex-col justify-between">
+          <div>
             <img
-              src="/imagenes/cajasinicio/nosotros-lideres.png"
-              alt="Foto de perfil"
-              class="w-1/4 rounded-full absolute right-0"
-              srcset="/imagenes/cajasinicio/nosotros-lideres.png"
+              src="/imagenes/cajasinicio/anbal_avatar.png"
+              alt="Avatar de Aníbal"
+              class="w-24 h-24 rounded-2xl object-cover bg-white/10 border border-white/10"
+              srcset="/imagenes/cajasinicio/anbal_avatar.png"
             />
+
+            <h2 class="mt-6 text-xl font-semibold">Perfil profesional</h2>
+            <p class="mt-3 text-sm leading-7 text-white/85">
+              Perfil orientado a backend y arquitectura práctica, con experiencia en sistemas corporativos,
+              integración con hardware, automatización en Linux y despliegues productivos.
+            </p>
+          </div>
+
+          <div class="mt-8 space-y-3 text-sm">
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+              <p class="font-semibold">Especialidades</p>
+              <p class="mt-1 text-white/80">Backend, SQL, tiempo real, Linux, RFID, integraciones empresariales</p>
+            </div>
+
+            <div class="rounded-2xl bg-white/10 p-4 border border-white/10">
+              <p class="font-semibold">Enfoque</p>
+              <p class="mt-1 text-white/80">Rendimiento, mantenibilidad, trazabilidad y operación real</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMEN + STACK -->
+    <section class="grid lg:grid-cols-[1.25fr_.75fr] gap-8 mt-10">
+      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 class="text-2xl font-bold text-principal-900">Resumen ejecutivo</h2>
+
+        <div class="mt-6 space-y-5 text-principal-600 leading-8">
+          <p>
+            Soy egresado de <b>Ingeniería de Sistemas</b> y me especializo en construir soluciones que conectan
+            procesos reales de negocio con software mantenible y orientado a producción.
+          </p>
+
+          <p>
+            Mi fortaleza está en el <b>backend</b>, especialmente con <b>PHP</b>, <b>Node.js</b> y bases de datos
+            relacionales, además de experiencia implementando sistemas en <b>tiempo real</b> con <b>Redis</b> y
+            <b> WebSockets</b>.
+          </p>
+
+          <p>
+            He trabajado en sistemas de <b>control de piso</b>, trazabilidad, consolidación de información operativa,
+            integraciones con <b>Sybase</b>, automatizaciones Linux y despliegues productivos usando
+            <b> Docker</b>, <b>PM2</b> y <b>systemd</b>.
+          </p>
+
+          <p>
+            También participo en integraciones con <b>RFID</b>, lectores industriales y Android, llevando soluciones
+            desde el modelo de datos y los stored procedures hasta la interacción con dispositivos.
+          </p>
+        </div>
+      </div>
+
+      <aside class="space-y-8">
+        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-principal-900">Stack principal</h3>
+
+          <div class="mt-6 space-y-5">
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-principal-400 font-bold">Backend</p>
+              <p class="mt-2 text-principal-700 leading-7">PHP, Node.js, NestJS, APIs REST, WebSockets</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-principal-400 font-bold">Bases de datos</p>
+              <p class="mt-2 text-principal-700 leading-7">MySQL, PostgreSQL, Sybase, procedimientos almacenados, optimización SQL</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-principal-400 font-bold">Infraestructura</p>
+              <p class="mt-2 text-principal-700 leading-7">Linux, Docker, Nginx, PM2, systemd, despliegues y tuning</p>
+            </div>
+
+            <div>
+              <p class="text-xs uppercase tracking-[0.18em] text-principal-400 font-bold">Integración</p>
+              <p class="mt-2 text-principal-700 leading-7">RFID, Zebra, UROVO, Android Kotlin, flujos operativos de planta</p>
+            </div>
           </div>
         </div>
 
-        <!-- ACERCA DE MI -->
-        <div class="resume_title flex gap-4 items-center -ml-5 mt-4">
-          <img
-            alt="Acerca de mí"
-            loading="lazy"
-            width="60"
-            height="60"
-            decoding="async"
-            class="p-1 text-verde"
-            style="color:transparent"
-            src="/imagenes/acercademi/acercademi.svg"
-          />
-          <h3 class="h4 text-principal text-base lg:text-lg">Acerca de mí</h3>
-        </div>
+        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+          <h3 class="text-xl font-bold text-principal-900">Formación</h3>
 
-        <ol class="relative border-l border-verde-200 dark:border-verde-700">
-          <li class="mb-10 ml-6">
-            <div
-              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-            ></div>
-
-            <h3 class="flex items-center mb-2 text-lg font-semibold text-principal-900">
-              <span class="text-primary block text-lg font-semibold">
-                <svg
-                  class="text-principal-400 w-6 h-6 inline-block"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="#00004c"
-                  viewBox="0 0 256 256"
-                >
-                  <path
-                    d="m192.97 35.026 9.178-13.106a6 6 0 0 1 9.83 6.883l-9.177 13.106a6 6 0 0 1-9.83-6.883Zm-21.818-2.505a5.993 5.993 0 0 0 7.349-4.243l4.142-15.454A6 6 0 0 0 171.05 9.72l-4.142 15.454a6.001 6.001 0 0 0 4.243 7.348Zm36.099 66.61a78.372 78.372 0 0 1-14.06 95.766 78.006 78.006 0 0 1-140.754 12.091l-37-64.086a23.98 23.98 0 0 1 20.793-35.987l-3.615-6.262a23.984 23.984 0 0 1 17.286-35.737A24 24 0 0 1 91.27 43.108a23.971 23.971 0 0 1 41.804-.455l15.616 27.049a23.987 23.987 0 0 1 41.561-.015Zm-30.105 35.857-17-29.445a12 12 0 1 0-20.785 12l16 27.713a6 6 0 1 1-10.392 6l-42-72.746a12 12 0 1 0-20.784 12l30 51.962a6 6 0 0 1-10.393 6l-38-65.819a12 12 0 1 0-20.784 12l38 65.819a6 6 0 1 1-10.393 6l-23.999-41.568v-.002a12 12 0 0 0-20.786 12l37 64.086a66 66 0 1 0 114.316-66Z"
-                  ></path>
-                </svg>
-                Hola, soy <b>Aníbal</b>
-              </span>
-            </h3>
-
-            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-              Egresado de <b>Ingeniería de Sistemas</b>. Desarrollo soluciones web y móviles orientadas
-              a procesos reales de negocio, con foco en <b>rendimiento</b>, <b>mantenibilidad</b> y
-              <b>producción</b>.
-            </p>
-
-            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-              Soy <b>Full Stack Developer</b> con fuerte orientación al <b>Back End</b> (PHP/Node.js),
-              y experiencia en <b>tiempo real</b> (Redis + WebSockets), optimización de bases de datos,
-              APIs REST, y despliegues en <b>Linux</b> con <b>Docker</b>.
-            </p>
-
-            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-              He implementado sistemas industriales como <b>control de piso</b> (confecciones),
-              reportes de eficiencia, consolidaciones diarias para tablas con <b>+3M registros</b>,
-              y automatizaciones en Ubuntu (limpieza de sesiones, jobs y procesos batch).
-              También elaboro documentación funcional en <b>Bizagi</b> (BPMN, casos de uso y secuencias).
-            </p>
-
-            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500 indent-8">
-              Actualmente profundizo en <b>NestJS + NATS</b> para arquitecturas desacopladas y
-              microservicios, y en integraciones con Android usando <b>Kotlin</b> y notificaciones.
-            </p>
-          </li>
-        </ol>
-
-        <!-- EXPERIENCIA -->
-        <div class="resume_title flex gap-4 items-center -ml-5">
-          <img
-            alt="Experiencia laboral"
-            loading="lazy"
-            width="60"
-            height="60"
-            decoding="async"
-            class="p-1"
-            style="color:transparent"
-            src="/imagenes/acercademi/trabajos.svg"
-          />
-          <h3 class="h4 text-principal lg:text-lg text-base">Experiencia laboral</h3>
-        </div>
-
-        <ol class="relative border-l border-verde-200 dark:border-verde-700">
-          <!-- COFACO -->
-          <li class="mb-10 ml-6">
-            <div
-              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-            ></div>
-
-            <div class="flex justify-between gap-3 flex-wrap">
-              <time class="block mb-1 text-sm font-normal leading-none text-principal-400">
-                2024 Agosto - Presente
-              </time>
-              <time class="block mb-1 text-sm font-normal leading-none text-principal-900">
-                Ref. Fredy Jurado (Jefe Sistemas) 987960662
-              </time>
+          <div class="mt-6 space-y-5">
+            <div>
+              <p class="text-sm text-principal-400">2022</p>
+              <h4 class="font-semibold text-principal-900">Ingeniería de Sistemas</h4>
+              <p class="text-principal-600">Universidad Tecnológica del Perú</p>
             </div>
 
-            <h4 class="mb-1 text-lg font-light text-principal-300">
-              <span class="text-primary mb-1 block text-lg font-semibold">COFACO Industries S. A. C.</span>
-            </h4>
-            <h3 class="mb-1 text-lg font-bold text-principal-900">
-              <span class="text-primary mb-2 block text-lg font-semibold uppercase">
+            <div>
+              <p class="text-sm text-principal-400">2014</p>
+              <h4 class="font-semibold text-principal-900">Computación e Informática</h4>
+              <p class="text-principal-600">Instituto Superior Tecnológico CEVATEC</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- EXPERIENCIA -->
+    <section class="mt-10 rounded-3xl border border-slate-200 bg-white p-8 lg:p-10 shadow-sm">
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-2xl font-bold text-principal-900">Experiencia profesional</h2>
+          <p class="text-principal-500 mt-2">
+            Experiencia enfocada en sistemas empresariales, operación en planta, tiempo real y optimización de datos.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 space-y-8">
+        <!-- COFACO -->
+        <article class="rounded-3xl border border-slate-200 p-6 lg:p-8">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p class="text-sm uppercase tracking-[0.16em] text-principal-400 font-semibold">
+                Agosto 2024 – Presente
+              </p>
+              <h3 class="mt-2 text-2xl font-bold text-principal-900">COFACO Industries S. A. C.</h3>
+              <p class="mt-1 text-principal-700 font-semibold uppercase">
                 Analista de Sistemas / Full Stack Developer
-              </span>
-            </h3>
-
-            <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-              Empresa del rubro textil. Implementación de soluciones para <b>control de producción</b>,
-              <b>control de piso</b>, trazabilidad y reportes operativos.
-            </p>
-
-            <ul class="text-principal-500 text-xl sm:text-base font-normal list-disc pl-6 space-y-2">
-              <li>
-                Diseño y desarrollo de un <b>sistema de control de piso</b> (confecciones) con reportes
-                de eficiencia, tiempos muertos, operación vs meta y potencial por línea.
-              </li>
-              <li>
-                Optimización de rendimiento para tablas con <b>+3 millones de registros</b> mediante
-                <b>consolidaciones diarias</b>, índices y procedimientos/funciones SQL.
-              </li>
-              <li>
-                Implementación de eventos en tiempo real con <b>Redis (pub/sub)</b> y <b>WebSockets</b>
-                para alertas de fallas, cambios de operación y actividades no productivas.
-              </li>
-              <li>
-                Integración con sistemas legacy en <b>Sybase</b> y servicios backend en <b>PHP</b>;
-                desarrollo de APIs para consumo web y Android.
-              </li>
-              <li>
-                Desarrollo de integración Android con <b>Kotlin</b> para asociar <b>dispositivo ↔ máquina</b>
-                y soportar operación en planta.
-              </li>
-              <li>
-                Automatización en <b>Ubuntu</b> (jobs, limpieza de sesiones, procesos batch) y despliegues
-                con <b>Docker</b>, <b>PM2</b> y <b>systemd</b>.
-              </li>
-              <li>
-                Documentación funcional y de procesos en <b>Bizagi</b> (BPMN, casos de uso y secuencias).
-              </li>
-              <li>
-                Implementación de soluciones RFID (UROVO DT50, Zebra FX9600, UHF TS800) para control y trazabilidad.
-              </li>
-            </ul>
-          </li>
-
-          <!-- TAI LOY -->
-          <li class="mb-10 ml-6">
-            <div
-              class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-            ></div>
-
-            <div class="flex justify-between gap-3 flex-wrap">
-              <time class="block mb-1 text-sm font-normal leading-none text-principal-400">
-                2023 Diciembre - 2024 Julio
-              </time>
-              <time class="block mb-1 text-sm font-normal leading-none text-principal-900">
-                Ref. Edgar Flower (Jefe Sistemas) 994158227
-              </time>
+              </p>
             </div>
 
-            <h4 class="mb-1 text-lg font-light text-principal-300">
-              <span class="text-primary mb-1 block text-lg font-semibold">TAILOY S.A.</span>
-            </h4>
+            <div class="text-sm text-principal-500">
+              <p><b>Referencia:</b> Fredy Jurado</p>
+              <p>Jefe de Sistemas · 987960662</p>
+            </div>
+          </div>
 
-            <h3 class="mb-1 text-lg font-bold text-principal-900">
-              <span class="text-primary mb-2 block text-lg font-semibold uppercase">Analista de Sistemas</span>
-            </h3>
+          <p class="mt-5 text-principal-600 leading-8">
+            Participación en soluciones para <b>control de producción</b>, trazabilidad operativa, alertas,
+            integraciones backend y optimización de bases de datos en entorno industrial textil.
+          </p>
 
-            <p class="text-xl sm:text-base font-normal text-principal-500 indent-8 mb-4">
-              Soporte y evolución de sistemas comerciales y corporativos. Integraciones, APIs y despliegues en Linux.
-            </p>
+          <div class="mt-6 grid lg:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <h4 class="font-semibold text-principal-900">Logros destacados</h4>
+              <ul class="mt-3 text-principal-600 leading-7 list-disc pl-5 space-y-2">
+                <li>Diseño de sistema de control de piso con métricas de eficiencia, tiempos muertos y avance por línea.</li>
+                <li>Optimización de tablas con más de <b>3 millones de registros</b> usando consolidaciones, índices y SQL.</li>
+                <li>Implementación de alertas en tiempo real con <b>Redis Pub/Sub</b> y <b>WebSockets</b>.</li>
+                <li>Integración de soluciones RFID con <b>UROVO DT50</b>, <b>Zebra FX9600</b> y <b>UHF TS800</b>.</li>
+              </ul>
+            </div>
 
-            <ul class="text-principal-500 text-xl sm:text-base font-normal list-disc pl-6 space-y-2">
-              <li>APIs REST en PHP con autenticación por tokens para consumo desde Android.</li>
-              <li>Soporte a sistemas en Python (Django) y PostgreSQL, mejorando estabilidad y respuesta ante incidencias.</li>
-              <li>Despliegues en Linux (Apache/Nginx) optimizando tiempos de publicación y mantenimiento.</li>
-            </ul>
-          </li>
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <h4 class="font-semibold text-principal-900">Tecnologías aplicadas</h4>
+              <p class="mt-3 text-principal-600 leading-7">
+                PHP, Node.js, MySQL, Sybase, Redis, WebSockets, Kotlin, Docker, Ubuntu, PM2, systemd, Bizagi.
+              </p>
 
-          <!-- Resto de experiencias: puedes mantenerlas como están (ya funcionan) -->
-        </ol>
+              <h4 class="font-semibold text-principal-900 mt-5">Aporte funcional</h4>
+              <p class="mt-3 text-principal-600 leading-7">
+                Desarrollo de APIs para web y Android, automatizaciones batch y documentación de procesos
+                con BPMN, casos de uso y secuencias.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- TAILOY -->
+        <article class="rounded-3xl border border-slate-200 p-6 lg:p-8">
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p class="text-sm uppercase tracking-[0.16em] text-principal-400 font-semibold">
+                Diciembre 2023 – Julio 2024
+              </p>
+              <h3 class="mt-2 text-2xl font-bold text-principal-900">TAILOY S.A.</h3>
+              <p class="mt-1 text-principal-700 font-semibold uppercase">
+                Analista de Sistemas
+              </p>
+            </div>
+
+            <div class="text-sm text-principal-500">
+              <p><b>Referencia:</b> Edgar Flower</p>
+              <p>Jefe de Sistemas · 994158227</p>
+            </div>
+          </div>
+
+          <p class="mt-5 text-principal-600 leading-8">
+            Soporte, evolución y despliegue de soluciones corporativas, con foco en estabilidad,
+            integraciones y mantenimiento operativo.
+          </p>
+
+          <div class="mt-6 grid lg:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <h4 class="font-semibold text-principal-900">Responsabilidades</h4>
+              <ul class="mt-3 text-principal-600 leading-7 list-disc pl-5 space-y-2">
+                <li>Desarrollo de APIs REST en PHP con autenticación por tokens.</li>
+                <li>Soporte a sistemas en Python Django y PostgreSQL.</li>
+                <li>Despliegues en Linux mejorando la continuidad operativa.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl bg-slate-50 border border-slate-200 p-5">
+              <h4 class="font-semibold text-principal-900">Tecnologías aplicadas</h4>
+              <p class="mt-3 text-principal-600 leading-7">
+                PHP, Python, Django, PostgreSQL, Apache, Nginx, Linux.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPETENCIAS -->
+    <section class="grid lg:grid-cols-2 gap-8 mt-10">
+      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 class="text-2xl font-bold text-principal-900">Competencias técnicas</h2>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">PHP 8+</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Node.js</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">NestJS</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">JavaScript</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">SQL</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Redis</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">WebSockets</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Docker</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Linux</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">MySQL</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">PostgreSQL</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Sybase</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Kotlin</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">RFID</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Zebra SDK</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">PM2</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">systemd</span>
+          <span class="px-3 py-2 rounded-full bg-slate-100 text-principal-800">Bizagi</span>
+        </div>
       </div>
 
-      <!-- Sidebar -->
-      <div class="lg:col-span-1 p-3 lg:pr-10 lg:bg-grey-light rounded-xl md:order-1">
-        <img
-          src="/imagenes/cajasinicio/anbal_avatar.png"
-          alt="Avatar de Aníbal"
-          class="w-20 hidden lg:flex md:flex"
-          srcset="/imagenes/cajasinicio/anbal_avatar.png"
-        />
+      <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 class="text-2xl font-bold text-principal-900">Cómo aporto valor</h2>
 
-        <!-- EDUCACION -->
-        <div class="resume_title flex gap-4 items-center -ml-5">
-          <img
-            alt="Educación"
-            loading="lazy"
-            width="60"
-            height="60"
-            decoding="async"
-            class="p-1"
-            style="color:transparent"
-            src="/imagenes/acercademi/educacion.svg"
-          />
-          <h3 class="h4 text-principal text-xl">Educación</h3>
-        </div>
-
-        <ol class="relative border-l border-verde-200 dark:border-verde">
-          <li class="mb-10 ml-4">
-            <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-principal-400">2022</time>
-            <h3 class="text-lg font-semibold text-principal-900">Ingeniería de Sistemas</h3>
-            <p class="mb-4 text-xl sm:text-base font-normal text-principal-500">
-              Universidad Tecnológica del Perú
-            </p>
-          </li>
-
-          <li class="mb-10 ml-4">
-            <div class="absolute w-3 h-3 bg-principal-200 rounded-full mt-1.5 -left-1.5 border border-white"></div>
-            <time class="mb-1 text-sm font-normal leading-none text-principal-400">2014</time>
-            <h3 class="text-lg font-semibold text-principal-900">Computación e Informática</h3>
-            <p class="text-xl sm:text-base font-normal text-principal-500">
-              Instituto Superior Tecnológico CEVATEC
-            </p>
-          </li>
-        </ol>
-
-        <div class="h-10"></div>
-
-        <!-- SKILLS -->
-        <div class="resume_title flex gap-4 items-center -ml-5">
-          <img
-            alt="Skills"
-            loading="lazy"
-            width="60"
-            height="60"
-            decoding="async"
-            class="p-1"
-            style="color:transparent"
-            src="/imagenes/acercademi/skill.svg"
-          />
-          <h3 class="h4 text-principal lg:text-lg text-base">Skills</h3>
-        </div>
-
-        <ol class="relative border-l border-verde-200 dark:border-verde-700">
-          <li class="mb-10 ml-6">
-            <!-- PHP -->
-            <span class="bg-[#777BB3] text-white font-bold px-1 mb-1 inline-block">PHP</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="PHP" aria-valuenow="85" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#777BB3]" style="width: 85%"></span>
-              </span>
-            </div>
-
-            <!-- NODE -->
-            <span class="bg-[#689F63] text-white font-bold px-1 mb-1 inline-block">Node.js</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="Node.js" aria-valuenow="80" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#689F63]" style="width: 80%"></span>
-              </span>
-            </div>
-
-            <!-- JS -->
-            <span class="bg-[#F0DB4F] text-principal font-bold px-1 mb-1 inline-block">JavaScript</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="JavaScript" aria-valuenow="80" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#F0DB4F]" style="width: 80%"></span>
-              </span>
-            </div>
-
-            <!-- REDIS -->
-            <span class="bg-[#D82C20] text-white font-bold px-1 mb-1 inline-block">Redis</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="Redis" aria-valuenow="70" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#D82C20]" style="width: 70%"></span>
-              </span>
-            </div>
-
-            <!-- DOCKER -->
-            <span class="bg-[#0db7ed] text-white font-bold px-1 mb-1 inline-block">Docker</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="Docker" aria-valuenow="75" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#0db7ed]" style="width: 75%"></span>
-              </span>
-            </div>
-
-            <!-- LINUX -->
-            <span class="bg-[#111827] text-white font-bold px-1 mb-1 inline-block">Linux</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="Linux" aria-valuenow="80" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#111827]" style="width: 80%"></span>
-              </span>
-            </div>
-
-            <!-- MYSQL -->
-            <span class="bg-[#000000] text-white font-bold px-1 mb-1 inline-block">MySQL</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="MySQL" aria-valuenow="80" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#000000]" style="width: 80%"></span>
-              </span>
-            </div>
-
-            <!-- POSTGRES -->
-            <span class="bg-[#336791] text-white font-bold px-1 mb-1 inline-block">PostgreSQL</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="PostgreSQL" aria-valuenow="70" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#336791]" style="width: 70%"></span>
-              </span>
-            </div>
-
-            <!-- ANDROID -->
-            <span class="bg-[#3DDC84] text-white font-bold px-1 mb-1 inline-block">Android (Kotlin)</span>
-            <div class="w-[85%] mb-2">
-              <span role="progressbar" aria-label="Android Kotlin" aria-valuenow="65" class="block rounded-full bg-principal-200">
-                <span class="block h-2 rounded-full bg-[#3DDC84]" style="width: 65%"></span>
-              </span>
-            </div>
-
-            <div
-              class="absolute w-3 h-3 bg-verde-200 rounded-full mt-1.5 -left-1.5 border border-white dark:border-verde-900 dark:bg-verde-700"
-            ></div>
-          </li>
-        </ol>
+        <ul class="mt-6 text-principal-600 leading-8 list-disc pl-5 space-y-3">
+          <li>Convierto procesos operativos complejos en soluciones backend claras y mantenibles.</li>
+          <li>Me enfoco en rendimiento real: consultas, índices, colas, consolidaciones y tiempos de respuesta.</li>
+          <li>Puedo moverme entre software, servidor, base de datos y dispositivo sin perder visión del negocio.</li>
+          <li>Trabajo bien en contextos legacy, industriales y de alta dependencia operativa.</li>
+        </ul>
       </div>
-    </div>
+    </section>
   </div>
 </Layout>
